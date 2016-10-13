@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 vendor/acacha/admin-lte-template-laravel/public/
+web: vendor/bin/heroku-php-apache2 public/
