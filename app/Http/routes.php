@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function()
-{
-    return User::all();
+Route::get('/', function () {
+    return view('welcome');
 });
 
 
