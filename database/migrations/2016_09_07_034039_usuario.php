@@ -13,7 +13,7 @@ class Usuario extends Migration
     public function up()
     {
         Schema::create('usuario', function (Blueprint $table) {
-            $table->int('id_usuario');
+            $table->integer('id_usuario');
             $table->string('nombre');
             $table->string('apellido');
             $table->string('telefono');
