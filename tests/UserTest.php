@@ -20,14 +20,14 @@ class UserTest extends TestCase
     public function testBackEndAgregar(){
 
     $usuario = new App\Usuario();
-    $usuario-> id_usuario ='2';
-    $usuario-> nombre ='Maria';
-    $usuario-> apellido ='Hernandez';
-   	$usuario-> telefono ='123';
-    $usuario-> direccion = 'Calarca';
+    $usuario-> idUsuario ='2';
+    $usuario-> nombre ='Maria Hernandez';
+    $usuario-> email ='maria65@hotmail.com';
+   	$usuario-> contraseña ='1234567';
+    $usuario-> ciudad = 'Calarca';
     $usuario->save();
 
-  	$this->seeInDatabase('usuario', ['id_usuario' => '2']);
+  	$this->seeInDatabase('usuario', ['idUsuario' => '2']);
 
 	}
   
