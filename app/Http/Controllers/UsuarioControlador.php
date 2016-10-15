@@ -15,11 +15,11 @@ class UsuarioControlador extends Controller
 
 
     	$user = new Usuario($request->all());
-        $user ->id= $_POST['id_usuario']:
+        $user ->id= $_POST['idUsuario']:
         $user->nombre= $_POST['nombre'];
-    	$user->apellido= $_POST['apellido'];
-    	$user->telefono=$_POST['telefono'];
-    	$user->direcion=$_POST['direcion'];
+    	$user->email= $_POST['email'];
+    	$user->contraseña=$_POST['contraseña'];
+    	$user->ciudad=$_POST['ciudad'];
     	$user->save();
     	
     }
