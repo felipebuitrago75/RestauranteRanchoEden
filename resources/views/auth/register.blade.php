@@ -40,8 +40,8 @@
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.retrypepassword') }}" name="password_confirmation"/>
-                    <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="{{ trans('adminlte_lang::message.city') }}" name="ciudad" value="{{ old('ciudad') }}"/>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
                 <div class="row">
                     <div class="col-xs-1">
@@ -58,7 +58,7 @@
                             <button type="button" class="btn btn-block btn-flat" data-toggle="modal" data-target="#termsModal">{{ trans('adminlte_lang::message.terms') }}</button>
                         </div>
                     </div><!-- /.col -->
-                    <div class="col-xs-4 col-xs-push-1">
+                    <div action= "{{ route('usuario.store') }}" method="POST">
                         <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.register') }}</button>
                     </div><!-- /.col -->
                 </div>
@@ -66,7 +66,7 @@
 
           
 
-            <a href="{{ url('/login') }}" class="text-center">{{ trans('adminlte_lang::message.membreship') }}</a>
+            <a>{{ trans('adminlte_lang::message.membreship') }}</a>
         </div><!-- /.form-box -->
     </div><!-- /.register-box -->
 

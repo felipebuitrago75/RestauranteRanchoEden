@@ -21,6 +21,7 @@ class UsuarioControlador extends Controller
     	$user->contraseña=$_POST['contraseña'];
     	$user->ciudad=$_POST['ciudad'];
     	$user->save();
+        return view('login')->with('usuario',$user);
     	
     }
 

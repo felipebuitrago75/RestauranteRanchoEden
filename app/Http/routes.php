@@ -21,3 +21,4 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/admin', 'HomeController@index');
  
 });
+Route::resource('usuario', 'UsuarioControlador');
