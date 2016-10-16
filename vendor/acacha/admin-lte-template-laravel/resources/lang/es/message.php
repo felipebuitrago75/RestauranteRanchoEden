@@ -125,4 +125,5 @@ return [
     'password'                => 'Contraseña',
     'retrypepassword'         => 'Vuelva a escribir la contraseña',
     'fullname'                => 'Nombre completo',
+    'city'                    => 'Ciudad'
 ];

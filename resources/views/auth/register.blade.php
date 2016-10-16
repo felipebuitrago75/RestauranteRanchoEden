@@ -9,7 +9,7 @@
     <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href="{{ url('/home') }}"><b>Restaurante rancho eden</b></a>
+            <a href="{{ url('/home') }}"><b>Restaurante Rancho eden</b></a>
         </div>
 
         @if (count($errors) > 0)
@@ -39,6 +39,12 @@
                     <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
+
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.retrypepassword') }}" name="password_confirmation"/>
+                    <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                </div>
+
                 <div class="form-group has-feedback">
                     <input type="text" class="form-control" placeholder="{{ trans('adminlte_lang::message.city') }}" name="ciudad" value="{{ old('ciudad') }}"/>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -66,7 +72,7 @@
 
           
 
-            <a>{{ trans('adminlte_lang::message.membreship') }}</a>
+            <a href="{{ url('/login') }}" class="text-center">{{ trans('adminlte_lang::message.membreship') }}</a>
         </div><!-- /.form-box -->
     </div><!-- /.register-box -->
 
