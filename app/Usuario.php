@@ -11,4 +11,14 @@ class Usuario extends Model
     public $timestamps = false;
     protected $fillable = ['idUsuario','nombre', 'email','contraseña', 'ciudad'];
 
+
+/**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'contraseña', 'remember_token',
+    ];
+
 }
