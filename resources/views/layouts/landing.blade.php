@@ -145,7 +145,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <br>
             <br>
             <div class="col-lg-6 centered">
-                <img class="centered" src="{{ asset('/img/captura.png') }}" alt="">
+                <img class="centered" src="{{ asset('/img/logo.png') }}" alt="">
             </div>
 
             <div class="col-lg-6">
