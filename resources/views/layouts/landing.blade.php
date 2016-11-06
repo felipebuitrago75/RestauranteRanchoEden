@@ -145,7 +145,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <br>
             <br>
             <div class="col-lg-6 centered">
-                <img class="centered" src="{{ asset('/img/CapturaLogo.png') }}" alt="">
+                <img class="centered" src="{{ asset('/img/captura.png') }}" alt="">
             </div>
 
             <div class="col-lg-6">
@@ -233,11 +233,9 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="{{ asset('/img/item-01.png') }}" alt="">
-                        </div>
-                        <div class="item">
                             <img src="{{ asset('/img/item-02.png') }}" alt="">
                         </div>
+
                         <div class="item">
                             <img src="{{ asset('/img/item-03.png') }}" alt="">
                         </div>
