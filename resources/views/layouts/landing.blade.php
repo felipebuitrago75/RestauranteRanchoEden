@@ -83,14 +83,14 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <div class="row centered">
             <div class="col-lg-12">
-                <h1><a href="#">Gesion de Indicadores Ambientales</a></h1>
+                <h1><a href="#">Gesitón de Indicadores Ambientales</a></h1>
                 <h3>  
                 </h3>
                 <h3><a href="{{ url('/register') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
             </div>
             <div class="col-lg-2">
-                <h5>{{ trans('adminlte_lang::message.amazing') }}</h5>
-                <p>{{ trans('adminlte_lang::message.basedadminlte') }}</p>
+                <h5>Quindio, Sabor y Descanso</h5>
+                <p></p>
                 <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow1.png') }}">
             </div>
             <div class="col-lg-8">
@@ -99,8 +99,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <div class="col-lg-2">
                 <br>
                 <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow2.png') }}">
-                <h5>{{ trans('adminlte_lang::message.awesomepackaged') }}</h5>
-                <p>... {{ trans('adminlte_lang::message.by') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a> {{ trans('adminlte_lang::message.at') }} <a href="http://acacha.org">acacha.org</a> {{ trans('adminlte_lang::message.readytouse') }}</p>
+                <h5>Comprometidos con el medio ambiente</h5>
+                <p></p>
             </div>
         </div>
     </div> <!--/ .container -->
@@ -112,23 +112,24 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="intro">
     <div class="container">
         <div class="row centered">
-            <h1>{{ trans('adminlte_lang::message.designed') }}</h1>
+            <h1>Descripción del proyecto</h1>
             <br>
             <br>
             <div class="col-lg-4">
-                <img src="{{ asset('/img/intro01.png') }}" alt="">
-                <h3>{{ trans('adminlte_lang::message.community') }}</h3>
-                <p>{{ trans('adminlte_lang::message.see') }} <a href="https://github.com/acacha/adminlte-laravel">{{ trans('adminlte_lang::message.githubproject') }}</a>, {{ trans('adminlte_lang::message.post') }} <a href="https://github.com/acacha/adminlte-laravel/issues">{{ trans('adminlte_lang::message.issues') }}</a> {{ trans('adminlte_lang::message.and') }} <a href="https://github.com/acacha/adminlte-laravel/pulls">{{ trans('adminlte_lang::message.pullrequests') }}</a></p>
+                <img src="{{ asset('/img/reciclajee.png') }}" alt="">
+                <h3>Reciclaje</h3>
+                <p>Manejo de estrategias para aumentar el porcentaje de reciclaje en la empresa 
+                Rancho Edén S.A.S </p>
             </div>
             <div class="col-lg-4">
-                <img src="{{ asset('/img/intro02.png') }}" alt="">
-                <h3>{{ trans('adminlte_lang::message.schedule') }}</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <img src="{{ asset('/img/aumentoflecharoja.png') }}" alt="">
+                <h3>Rentabilidad</h3>
+                <p>Manejo de la relación existente entre los beneficios proporcionados por el proyecto y la inversión realizada por parte de la empresa Rancho Edén S.A.S</p>
             </div>
             <div class="col-lg-4">
                 <img src="{{ asset('/img/intro03.png') }}" alt="">
                 <h3>{{ trans('adminlte_lang::message.monitoring') }}</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Control de los aspectos tecnicos referentes a los indicadores de responsabilidad ambientales de la empresa Rancho Edén S.A.S </p>
             </div>
         </div>
         <br>
@@ -140,27 +141,28 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="features">
     <div class="container">
         <div class="row">
-            <h1 class="centered">{{ trans('adminlte_lang::message.whatnew') }}</h1>
+            <h1 class="centered">Reseña</h1>
             <br>
             <br>
             <div class="col-lg-6 centered">
-                <img class="centered" src="{{ asset('/img/mobile.png') }}" alt="">
+                <img class="centered" src="{{ asset('/img/CapturaLogo.png') }}" alt="">
             </div>
 
             <div class="col-lg-6">
-                <h3>{{ trans('adminlte_lang::message.features') }}</h3>
+                <h3>Reseña Historica</h3>
                 <br>
                 <!-- ACCORDION -->
                 <div class="accordion ac" id="accordion2">
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                {{ trans('adminlte_lang::message.design') }}
+                                Fundación
                             </a>
                         </div><!-- /accordion-heading -->
                         <div id="collapseOne" class="accordion-body collapse in">
                             <div class="accordion-inner">
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>El Restaurante Rancho Edén fue fundado el 13 de Noviembre
+                                de 1998 producto de la visión de negocio por parte del señor Fernando Tobón y su esposa Silvia Elena Fajardo, quienes vieron una oportunidad de surguir en este campo de la economia.</p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
@@ -169,12 +171,12 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                                {{ trans('adminlte_lang::message.retina') }}
+                                Inicios
                             </a>
                         </div>
                         <div id="collapseTwo" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>Eran tiempos dificiles en la región debido a la gran crisis cafetera que pasaba el departamento del Quindio, el crecimiento del Restaurante Rancho Edén se vio altamente benficiado por un suceso que afecto lamentablemente a toda la región Quindiana y fue el terremoto ocurrido el día lunes, 25 de enero de 1999 a las 13:19 (18:19:17 UTC) con una magnitud de 6,4 en la Escala de Richter. El Restaurante Rancho Edén fue uno de los pocos que no se vio afectado por la magnitud del sismo, y al estar cercano al Aeropuerto Internacional El Edén hizo que su crecimiento fuera exponencial debido a que el 90% de las personas que ingresaban al departamento a brindar sus ayudas lo hacian por el aeropuerto.</p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
@@ -183,12 +185,12 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                                {{ trans('adminlte_lang::message.support') }}
+                                Consolidación
                             </a>
                         </div>
                         <div id="collapseThree" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>El Restaurante se consolidó como uno de los mejores en la región caracterizado por su exceltente servicio y buena sazón. Ademas el Restaurante Rancho Edén cuenta con la infraestructura tecnologica mas estable y poderosa de la región, Software de facturación y comandas, intranet. En cuanto a la parte gastronomica el Restaurante Rancho Edén ha sido merecedor del premio al mejor plato tipico representativo de la región otorgado por el concurso "La Ruta del Sabor" con el plato llamado Cazuela Cuyabra.</p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
@@ -197,12 +199,12 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                                {{ trans('adminlte_lang::message.responsive') }}
+                                Actualidad
                             </a>
                         </div>
                         <div id="collapseFour" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>Actualmente el Restaurante Rancho Edén cuenta con diferentes servicios para satisfacer todas las necesidades de sus clientes. Servicio de hospedaje, servicio de mercado y panadería, zona de juegos para niños. Actualmente cuenta com mas de 70 empleados entre las diferentes secciones haciendo de este una empresa comprometida con la región y su progreso..   </p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
@@ -218,7 +220,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="showcase">
     <div class="container">
         <div class="row">
-            <h1 class="centered">{{ trans('adminlte_lang::message.screenshots') }}</h1>
+            <h1 class="centered">Algunas imágenes</h1>
             <br>
             <div class="col-lg-8 col-lg-offset-2">
                 <div id="carousel-example-generic" class="carousel slide">
@@ -235,6 +237,18 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         </div>
                         <div class="item">
                             <img src="{{ asset('/img/item-02.png') }}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('/img/item-03.png') }}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('/img/item-04.png') }}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('/img/item-05.png') }}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('/img/item-06.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -253,10 +267,10 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="col-lg-5">
             <h3>{{ trans('adminlte_lang::message.address') }}</h3>
             <p>
-                Av. Greenville 987,<br/>
-                New York,<br/>
-                90873<br/>
-                United States
+                Kilometro 10 via Aeropuerto, La Tebaida Quindio<br/>
+                Armenia Quindio<br/>
+                Telefono: 7479384<br/>
+                Colombia 
             </p>
         </div>
 
@@ -285,12 +299,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="c">
     <div class="container">
         <p>
-            <a href="https://github.com/acacha/adminlte-laravel"></a><b>admin-lte-laravel</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}.<br/>
-            <strong>Copyright &copy; 2015 <a href="http://acacha.org">Acacha.org</a>.</strong> {{ trans('adminlte_lang::message.createdby') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a>. {{ trans('adminlte_lang::message.seecode') }} <a href="https://github.com/acacha/adminlte-laravel">Github</a>
             <br/>
-            AdminLTE {{ trans('adminlte_lang::message.createdby') }} Abdullah Almsaeed <a href="https://almsaeedstudio.com/">almsaeedstudio.com</a>
-            <br/>
-             Pratt Landing Page {{ trans('adminlte_lang::message.createdby') }} <a href="http://www.blacktie.co">BLACKTIE.CO</a>
+            <strong>Copyright &copy; 2016</strong> Restaurante Rancho Edén S.A.S Todos los derechos reservados.
         </p>
 
     </div>
