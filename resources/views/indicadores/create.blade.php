@@ -6,32 +6,28 @@
 			<div class="panel panel-default">
 				<div class="panel-heading"> Creacion indicador</div>
 					<div class="panel-body">
-					
-					{!! Form::open(['route'=> 'indicadores.store', 'method'=> 'POST']) !!}
 
-							<div class="form-group">
-						   {!! Form::label('id','Identificador del indicador')!!}
-						   {!! Form::number('id',null,['class'=> 'form-control'])!!}
 
-						  </div>
-						  <div class="form-group">
+
+					<form action="{{ route('indicadores.store') }}" method="post">
+					 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+					   <div class="form-group">
 						   {!! Form::label('nombre','Nombre del indicador')!!}
 						   {!! Form::text('nombre',null,['class'=> 'form-control'])!!}
 
 						  </div>
 						  <div class="form-group">
-						   {!! Form::label('responsable','Responsable')!!}
-						   {!! Form::text('responsable',null,['class'=> 'form-control'])!!}
-						    
+						   {!! Form::label('descripcion','Descripcion del indicador')!!}
+						   {!! Form::textarea('descripcion',null,['class'=> 'form-control','style' => 'resize:none'])!!}
+
 						  </div>
-						  <div class="form-group">
-				
-						    
-						  </div>
+					
 						 
 						  <button type="submit" class="btn btn-default">Registrar</button>
-						
-					{!! Form::close() !!}
+					</form>
+
+
+
 
 				
 					
