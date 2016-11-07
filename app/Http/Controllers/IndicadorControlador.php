@@ -12,7 +12,8 @@ class IndicadorControlador extends Controller
 {
     //
     public function __construct(){
-       
+        
+       return view('indicadores.index');
     }
 
     public function index(Request $request){

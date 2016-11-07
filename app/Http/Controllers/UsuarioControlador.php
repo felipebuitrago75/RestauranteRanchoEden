@@ -24,5 +24,9 @@ class UsuarioControlador extends Controller
         return view('login')->with('usuario',$user);
     	
     }
+    public function validor(){
+
+        return view('/home');
+    }
 
 }
