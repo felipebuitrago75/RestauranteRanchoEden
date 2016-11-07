@@ -8,7 +8,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>Restaurante Rancho Eden</b></a>
+            <a href="{{ url('/#') }}"><b>Restaurante Rancho Eden</b></a>
         </div><!-- /.login-logo -->
 
     @if (count($errors) > 0)
