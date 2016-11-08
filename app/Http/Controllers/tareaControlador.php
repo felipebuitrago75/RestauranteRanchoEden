@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 use App\tarea;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Indicador;
 use DB;
 use Carbon\Carbon;
-
+use Auth;
 class tareaControlador extends Controller
 {
     public function __construct(){
@@ -17,11 +18,10 @@ class tareaControlador extends Controller
 
     public function index(Request $request){
         
-        $tareas =tarea::paginate(5);
+        $indicadores =Indicador::paginate(5);
+        $tareas=tarea::paginate();
 
-
-        return view('indicadores.index',compact('indicadores'));
-        
+        return view('tareas.index',compact('indicadores','tareas'));
     }
 
  
@@ -35,11 +35,13 @@ class tareaControlador extends Controller
         $tareas = new tarea($request->all());
         $tareas->descripcion=$request->get('descripcion');
         $tareas->estado=$request->get('estado');
-        $tareas->indicador_id_indicador= Auth::user()->id;
+        $tareas->indicador_id_indicador=18;
         $tareas->save();
         
-        $tareas =tarea::paginate();
-        return view('indicadores.index',compact('indicadores'));
+        $indicadores =Indicador::paginate();
+        $tareas=tarea::paginate();
+
+        return view('indicadores.index',compact('indicadores','tareas'));
 
         
     }
@@ -62,4 +64,6 @@ class tareaControlador extends Controller
     public function destroy($id){
         return Redirect::to('tareas');
     }
+
+
 }

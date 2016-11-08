@@ -18,21 +18,42 @@
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Fecha</th>
-                <th>Usuario</th>
+                <th>Tareas</th>
                 <th>Acciones</th>
               </tr>
 
               @foreach ($indicadores as $indicador)
 
               <tr>
-                <td>{{intval(($indicador->id_indicador)/10)}}</td> 
+                <td>{{($indicador->id_indicador)}}</td> 
                 <td>{{$indicador->nombre}}</td> 
                 <td>{{$indicador->descripcion}}</td>  
-                <td>{{$indicador->fecha}}</td>  
-                <td>{{$indicador->usuario_idUsiario}}</td>  
+                <td>{{$indicador->fecha}}</td> 
+                <td>
+                <div class="btn-group">
+                  <button class="btn btn-default btn-sm dropdown-toggle"
+                          type="button" data-toggle="dropdown">
+                    Tareas <span class="caret"></span>
+                  </button>
+                 
+                  <ul class="dropdown-menu">
+                     @foreach($tareas as $tarea)
+                      @if(($indicador->id_indicador)=== $tarea->indicador_id_indicador)
+
+                    <a href="">{{$tarea->descripcion}}<br></a>
+                    @endif  
+                    @endforeach
+                  </ul>
+                </div>
+                   
+
+                </td>
+
+
+
                 <td>
                   <a href="{{route('tareas.create')}}">Agregar</a>
-                  <a href="#">Editar</a>
+                  <a href="{{route('tareas.index')}}">Editar</a>
                   <a href="#">Eliminar</a>
                 </td>
 
