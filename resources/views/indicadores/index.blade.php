@@ -24,7 +24,7 @@
               @foreach ($indicadores as $indicador)
 
               <tr>
-                <td>{{$indicador->id_indicador}}</td> 
+                <td>{{($indicador->id_indicador)/10}}</td> 
                 <td>{{$indicador->nombre}}</td> 
                 <td>{{$indicador->descripcion}}</td>  
                 <td>{{$indicador->fecha}}</td>  
