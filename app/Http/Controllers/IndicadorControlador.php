@@ -38,7 +38,7 @@ class IndicadorControlador extends Controller
         $indicador->fecha=Carbon::now();
         $indicador->nombre=$request->get('nombre');
         $indicador->descripcion=$request->get('descripcion');
-        $indicador->usuario_idUsuario=1;
+        $indicador->usuario_idUsuario= Auth::user()->id;
         $indicador->save();
         
         $indicadores =Indicador::paginate();
