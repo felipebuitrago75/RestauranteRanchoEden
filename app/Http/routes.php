@@ -16,14 +16,10 @@ Route::get('/', function () {
 });
 
 
-Route::group( ['middleware' => ['web'] ], function () {     
-
-    /* these routes use 'auth' middleware, so only an authenticated user will access*/
-    Route::group( ['middleware' => 'auth' ], function () {
-        Route::get('/admin', 'HomeController@index');
-    });
-
+Route::group(['middleware' => 'auth'], function () {
     Route::auth();
+    Route::get('/login', 'HomeController@index');
+ 
 });
 
 Route::group()
