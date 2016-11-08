@@ -1,5 +1,5 @@
 projectKey=IDRA
 serverUrl=http://localhost:9000
 dashboardUrl=http://localhost:9000/dashboard/index/IDRA
-ceTaskId=AVhFrgX8_Qim4YjVh1LI
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AVhFrgX8_Qim4YjVh1LI
+ceTaskId=AVhFnjnXmUiO-cyR0hvv
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVhFnjnXmUiO-cyR0hvv

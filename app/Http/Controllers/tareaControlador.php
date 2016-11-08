@@ -35,7 +35,7 @@ class tareaControlador extends Controller
         $tareas = new tarea($request->all());
         $tareas->descripcion=$request->get('descripcion');
         $tareas->estado=$request->get('estado');
-        $tareas->indicador_id_indicador=Auth::user()->id;
+        $tareas->indicador_id_indicador->$indicador->id_indicador;
         $tareas->save();
         
         $indicadores =Indicador::paginate();
