@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\IndicadorFormRequest;
 use DB ;
 use Carbon\Carbon;
+use Auth;
 
 
 class IndicadorControlador extends Controller
@@ -41,7 +42,7 @@ class IndicadorControlador extends Controller
         $indicador->usuario_idUsuario= Auth::user()->id;
         $indicador->save();
         
-        $indicadores =Indicador::paginate();
+        $indicadores =Indicador::paginate(5);
         return view('indicadores.index',compact('indicadores'));
 
         
