@@ -31,6 +31,7 @@
                 <td>{{$indicador->fecha}}</td>  
                 <td>{{$indicador->usuario_idUsiario}}</td>  
                 <td>
+                  <a href="{{route('tareas.create')}}">Agregar</a>
                   <a href="#">Editar</a>
                   <a href="#">Eliminar</a>
                 </td>

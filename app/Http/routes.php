@@ -23,3 +23,5 @@ Route::group(['middleware' => 'auth'], function () {
 });
 Route::resource('usuario', 'UsuarioControlador');
 Route::resource('indicadores','IndicadorControlador');
+
+Route::resource('tareas','tareaControlador');
