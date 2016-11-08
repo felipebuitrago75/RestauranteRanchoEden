@@ -10,6 +10,7 @@
           <p>
             <a class="btn btn-info" href="{{route('indicadores.create')}}" role="button">Crear indicador</a>
           </p>
+
           <p>hay {{$indicadores->total()}} registros</p>
             <table class="table table-striped">
               <tr>
@@ -24,7 +25,7 @@
               @foreach ($indicadores as $indicador)
 
               <tr>
-                <td>{{($indicador->id_indicador)/10}}</td> 
+                <td>intval({{($indicador->id_indicador)/10}})</td> 
                 <td>{{$indicador->nombre}}</td> 
                 <td>{{$indicador->descripcion}}</td>  
                 <td>{{$indicador->fecha}}</td>  
