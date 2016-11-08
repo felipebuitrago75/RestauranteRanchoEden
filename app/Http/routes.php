@@ -22,7 +22,7 @@ Route::group(['middleware' => 'auth'], function () {
  
 });
 
-
+ Route::post('/auth/login', 'Auth\AuthController@postLogin');
 Route::resource('usuario', 'UsuarioControlador');
 Route::resource('indicadores','IndicadorControlador');
 
