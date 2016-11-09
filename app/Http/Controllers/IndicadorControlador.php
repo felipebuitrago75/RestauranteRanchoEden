@@ -8,6 +8,7 @@ use App\tarea;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\IndicadorFormRequest;
 use DB ;
+use Auth;
 use Carbon\Carbon;
 
 
