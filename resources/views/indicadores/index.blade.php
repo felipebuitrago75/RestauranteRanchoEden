@@ -52,7 +52,7 @@
 
 
                 <td>
-                  <a href="{{route('tareas.create')}}">Agregar</a>
+                  <a href="{{URL::action('tareaControlador@edit',$indicador->id_indicador)}}">Agregar</a>
                   <a href="{{URL::action('IndicadorControlador@edit',$indicador->id_indicador)}}">Editar</a>
                   <a href="#">Eliminar</a>
                 </td>

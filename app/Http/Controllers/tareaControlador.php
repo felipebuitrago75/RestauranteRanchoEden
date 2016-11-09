@@ -10,6 +10,7 @@ use App\Indicador;
 use DB;
 use Carbon\Carbon;
 use Auth;
+use Illuminate\Support\Facades\Redirect;
 class tareaControlador extends Controller
 {
     public function __construct(){
@@ -27,21 +28,20 @@ class tareaControlador extends Controller
  
     public function create(){
 
-        return view("tareas.create");
+         return Redirect::to('indicadores');
+      
         
     }
+  
     public function store(Request $request){
 
         $tareas = new tarea($request->all());
         $tareas->descripcion=$request->get('descripcion');
         $tareas->estado=$request->get('estado');
-        $tareas->indicador_id_indicador=Auth::user()->id;
+        $tareas->indicador_id_indicador=$request->get('indicador_id_indicador');
         $tareas->save();
         
-        $indicadores =Indicador::paginate();
-        $tareas=tarea::paginate();
-
-        return view('indicadores.index',compact('indicadores','tareas'));
+       return Redirect::to('indicadores');
 
         
     }
@@ -49,7 +49,7 @@ class tareaControlador extends Controller
         return view("tareas.show",["tarea"=>tarea::findOrFail($id)]);
     }
     public function edit($id){
-        return view("tareas.edit",["tarea"=>tarea::findOrFail($id)]);
+        return view("tareas.create",["indicador"=>Indicador::findOrFail($id)]);
         
     }
     public function update(IndicadorFormRequest $request,$id){
