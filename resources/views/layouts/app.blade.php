@@ -116,7 +116,7 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Sistema de gestion de indicadores ambientales</h3>
+                  <h3 class="box-title">SISTEMA DE GESTIÓN DE INDICADORES AMBIENTALES : RESTAURANTE RANCHO EDEN</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     
