@@ -9,7 +9,7 @@
     <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href="{{ url('/home') }}"><b>Restaurante Rancho eden</b></a>
+            <a href="{{ url('/home') }}"><b>Restaurante Rancho Edén</b></a>
         </div>
 
         @if (count($errors) > 0)
@@ -24,7 +24,7 @@
         @endif
 
         <div class="register-box-body">
-            <p class="login-box-msg">{{ trans('adminlte_lang::message.registermember') }}</p>
+            <p class="login-box-msg">Registrar un nuevo miembro</p>
             <form action="{{ url('/register') }}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group has-feedback">
@@ -61,7 +61,7 @@
                     </div><!-- /.col -->
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <button type="button" class="btn btn-block btn-flat" data-toggle="modal" data-target="#termsModal">{{ trans('adminlte_lang::message.terms') }}</button>
+                            <button type="button" class="btn btn-block btn-flat" data-toggle="modal" data-target="#termsModal">Estoy de acuerdo</button>
                         </div>
                     </div><!-- /.col -->
                     <div action= "{{ route('usuario.store') }}" method="POST">

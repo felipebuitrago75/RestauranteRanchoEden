@@ -129,7 +129,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <div class="col-lg-4">
                 <img src="{{ asset('/img/intro03.png') }}" alt="">
                 <h3>{{ trans('adminlte_lang::message.monitoring') }}</h3>
-                <p>Control de los aspectos tecnicos referentes a los indicadores de responsabilidad ambientales de la empresa Rancho Edén S.A.S </p>
+                <p>Control de los aspectos técnicos referentes a los indicadores de responsabilidad ambientales de la empresa Rancho Edén S.A.S </p>
             </div>
         </div>
         <br>
@@ -149,7 +149,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             </div>
 
             <div class="col-lg-6">
-                <h3>Reseña Historica</h3>
+                <h3>Reseña Histórica</h3>
                 <br>
                 <!-- ACCORDION -->
                 <div class="accordion ac" id="accordion2">
@@ -162,7 +162,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         <div id="collapseOne" class="accordion-body collapse in">
                             <div class="accordion-inner">
                                 <p>El Restaurante Rancho Edén fue fundado el 13 de Noviembre
-                                de 1998 producto de la visión de negocio por parte del señor Fernando Tobón y su esposa Silvia Elena Fajardo, quienes vieron una oportunidad de surguir en este campo de la economia.</p>
+                                de 1998 producto de la visión de negocio por parte del señor Fernando Tobón y su esposa Silvia Elena Fajardo, quienes vieron una oportunidad de surguir en este campo de la economía.
+.</p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
@@ -176,7 +177,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         </div>
                         <div id="collapseTwo" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>Eran tiempos dificiles en la región debido a la gran crisis cafetera que pasaba el departamento del Quindio, el crecimiento del Restaurante Rancho Edén se vio altamente benficiado por un suceso que afecto lamentablemente a toda la región Quindiana y fue el terremoto ocurrido el día lunes, 25 de enero de 1999 a las 13:19 (18:19:17 UTC) con una magnitud de 6,4 en la Escala de Richter. El Restaurante Rancho Edén fue uno de los pocos que no se vio afectado por la magnitud del sismo, y al estar cercano al Aeropuerto Internacional El Edén hizo que su crecimiento fuera exponencial debido a que el 90% de las personas que ingresaban al departamento a brindar sus ayudas lo hacian por el aeropuerto.</p>
+                                <p>Eran tiempos dificiles en la región debido a la gran crisis cafetera que pasaba el departamento del Quindio, el crecimiento del Restaurante Rancho Edén estuvo altamente benficiado por un suceso que afecto lamentablemente a toda la región Quindiana y fue el terremoto ocurrido el día lunes, 25 de enero de 1999 a las 13:19 (18:19:17 UTC) con una magnitud de 6,4 en la Escala de Richter. El Restaurante Rancho Edén fue uno de los pocos que no resultó afectado por la magnitud del sismo, y al estar cercano al Aeropuerto Internacional El Edén hizo que su crecimiento fuera exponencial debido a que el 90% de las personas que ingresaban al departamento a brindar sus ayudas lo hacian por el aeropuerto.</p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
