@@ -9,11 +9,9 @@
     <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-<<<<<<< HEAD
             <a href="{{ url('/home') }}"><b>Restaurante Rancho Edén</b></a>
-=======
+
             <a href="{{ url('/home') }}"><b>Restaurante Rancho Eden</b></a>
->>>>>>> a3c021218948f3f1c8fc131e6cea4d9c74432ad6
         </div>
 
         @if (count($errors) > 0)
