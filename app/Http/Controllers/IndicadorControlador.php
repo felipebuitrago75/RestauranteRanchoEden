@@ -8,6 +8,7 @@ use App\tarea;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\IndicadorFormRequest;
 use DB ;
+use Auth;
 use Carbon\Carbon;
 
 
@@ -42,8 +43,7 @@ class IndicadorControlador extends Controller
         $indicador->usuario_idUsuario=Auth::user()->id;
     	$indicador->save();
         
-        $indicadores =Indicador::paginate();
-    	return view('indicadores.index',compact('indicadores'));
+        return Redirect::to('indicadores');
 
     	
     }
@@ -54,13 +54,14 @@ class IndicadorControlador extends Controller
     	return view("indicadores.edit",["indicador"=>Indicador::findOrFail($id)]);
     	
     }
-    public function update(IndicadorFormRequest $request,$id){
-    	$indicador =Indicador::findOrFail($id);
-    	$indicador->fecha=$request->get('fecha');
-    	$indicador->nombre=$request->get('nombre');
-    	$indicador->responsable=$request->get('responsable');
-    	$indicador->update();
-    	return Redirect::to('indicadores');
+  public function update(Request $request,$id){
+        $indicador =Indicador::findOrFail($id);
+        $indicador->fecha=Carbon::now();
+         $indicador->nombre=$request->get('nombre');
+         $indicador->descripcion=$request->get('descripcion');
+        $indicador->usuario_idUsuario=Auth::user()->id;
+        $indicador->update();
+        return Redirect::to('indicadores');
 
 
     }

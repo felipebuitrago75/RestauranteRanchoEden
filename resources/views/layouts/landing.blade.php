@@ -59,7 +59,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#home" class="smoothScroll">{{ trans('adminlte_lang::message.home') }}</a></li>
                 <li><a href="#desc" class="smoothScroll">{{ trans('adminlte_lang::message.description') }}</a></li>
-                <li><a href="#showcase" class="smoothScroll">{{ trans('adminlte_lang::message.showcase') }}</a></li>
+                <li><a href="#showcase" class="smoothScroll">Galería</a></li>
                 <li><a href="#contact" class="smoothScroll">{{ trans('adminlte_lang::message.contact') }}</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -83,7 +83,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <div class="row centered">
             <div class="col-lg-12">
-                <h1><a href="#">Gesitón de Indicadores Ambientales</a></h1>
+                <h1><a href="#">Gestión de Indicadores Ambientales</a></h1>
                 <h3>  
                 </h3>
                 <h3><a href="{{ url('/register') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
@@ -234,7 +234,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="{{ asset('/img/item-02.png') }}" alt="">
+                            <img src="{{ asset('/img/item-04.png') }}" alt="">
                         </div>
 
                         <div class="item">
@@ -274,26 +274,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         </div>
 
         <div class="col-lg-7">
-            <h3>{{ trans('adminlte_lang::message.dropus') }}</h3>
-            <br>
-            <form role="form" action="#" method="post" enctype="plain">
-                <div class="form-group">
-                    <label for="name1">{{ trans('adminlte_lang::message.yourname') }}</label>
-                    <input type="name" name="Name" class="form-control" id="name1" placeholder="{{ trans('adminlte_lang::message.yourname') }}">
-                </div>
-                <div class="form-group">
-                    <label for="email1">{{ trans('adminlte_lang::message.emailaddress') }}</label>
-                    <input type="email" name="Mail" class="form-control" id="email1" placeholder="{{ trans('adminlte_lang::message.enteremail') }}">
-                </div>
-                <div class="form-group">
-                    <label>{{ trans('adminlte_lang::message.yourtext') }}</label>
-                    <textarea class="form-control" name="Message" rows="3"></textarea>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-large btn-success">{{ trans('adminlte_lang::message.submit') }}</button>
-            </form>
-        </div>
-    </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.67923804956!2d-75.76618198571586!3d4.470583096751451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e385902e2dc40e7%3A0x9a6046b908f472b!2sRestaurante+Rancho+Eden!5e0!3m2!1ses-419!2sco!4v1478724515120" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 </div>
 <div id="c">
     <div class="container">
