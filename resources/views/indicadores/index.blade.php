@@ -30,22 +30,8 @@
                 <td>{{$indicador->descripcion}}</td>  
                 <td>{{$indicador->fecha}}</td> 
                 <td>
-                <div class="btn-group">
-                  <button class="btn btn-default btn-sm dropdown-toggle"
-                          type="button" data-toggle="dropdown">
-                     <a href="{{URL::action('tareaControlador@index',$indicador->id_indicador)}}">Tareas</a> <span class="caret"></span>
-                  </button>
-                 
-                  <ul class="dropdown-menu">
-                     @foreach($tareas as $tarea)
-                      @if(($indicador->id_indicador)=== $tarea->indicador_id_indicador)
-
-                    <a href="">{{$tarea->descripcion}}<br></a>
-                    @endif  
-                    @endforeach
-                  </ul>
-                </div>
-                   
+                
+                   <a class="btn btn-info" href="{{URL::action('tareaControlador@index',$indicador->id_indicador)}}" role="button">Tareas</a>
 
                 </td>
 
