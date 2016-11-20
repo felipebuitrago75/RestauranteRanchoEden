@@ -1,5 +1,11 @@
 <?php
 
+
+/*
+ * Taken from
+ * https://github.com/laravel/framework/blob/5.2/src/Illuminate/Auth/Console/stubs/make/controllers/UsuarioControlador.stub
+ */
+
 namespace App\Http\Controllers;
 
 
@@ -9,8 +15,18 @@ use App\Http\Controllers\Controller;
 use App\Usuario;
 use Laracasts\Flash\Flash;
 
+/**
+ * Class UsuarioControlador
+ * @package App\Http\Controllers
+ */
 class UsuarioControlador extends Controller
 {
+   
+   /**
+    * Funcion que guarda los datos de un usuario en la base de datos.
+    * @param Request $request solicutd del usuario.
+    * @return  view login retorna la vista login con el usuario creado.
+    */
     public function store(Request $request){
 
 
