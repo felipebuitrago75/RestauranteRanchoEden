@@ -13,7 +13,7 @@
 						   {!! Form::label('tarea','Tareas del indicador')!!}
 
 						    
-
+						   
 						   </div>
 						  <div class="form-group">
 						   <p style="text-align: center;">TABLA DE ANALISIS DE INDICADOR</p>
@@ -21,9 +21,10 @@
 						           <table align="center" border="1" cellpadding="1" cellspacing="1" id="TablaIndicador" style="width:500px;">
 						   	<tbody>
 						   		<tr>
-						   			<td style="text-align: center; border-color: rgb(51, 153, 51);"><strong>A&Ntilde;O 2015</strong></td>
-						   			<td colspan="2" style="text-align: center; border-color: rgb(51, 153, 51);"><strong>A&Ntilde;O 2016</strong></td>
-						   			<td colspan="2" style="text-align: center; border-color: rgb(51, 153, 51);"><strong>AHORRO</strong></td>
+						   			
+									<td colspan="2" style="text-align: center; border-color: rgb(51, 153, 51);"><strong>A&Ntilde;O 2015</strong></td>
+									<td colspan="2" style="text-align: center; border-color: rgb(51, 153, 51);"><strong>A&Ntilde;O 2016</strong></td>
+									<td style="text-align: center; border-color: rgb(51, 153, 51);"><strong>AHORRO </strong></td>
 						   		</tr>
 						   		<tr>
 						   			
@@ -102,6 +103,8 @@
 						   		<tr>
 						   			<td style="border-color: rgb(51, 153, 51);">TOTAL</td>
 						   			<td style="border-color: rgb(51, 153, 51);">&nbsp;</td>
+						   			<td style="border-color: rgb(51, 153, 51);">&nbsp;</td>
+						   			<td style="border-color: rgb(51, 153, 51);">&nbsp;</td>
 						   		</tr>
 						   	</tbody>
 						   </table>
@@ -109,7 +112,7 @@
 						  </div>
 					
 						 
-						  <button type="submit" class="btn btn-default">Actualizar</button>
+						  <button type="submit" class="btn btn-default">DESCARGAR</button>
 					{!! Form::close() !!}
 
 

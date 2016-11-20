@@ -33,7 +33,7 @@
                 <div class="btn-group">
                   <button class="btn btn-default btn-sm dropdown-toggle"
                           type="button" data-toggle="dropdown">
-                    Tareas <span class="caret"></span>
+                     <a href="{{URL::action('tareaControlador@index',$indicador->id_indicador)}}">Tareas</a> <span class="caret"></span>
                   </button>
                  
                   <ul class="dropdown-menu">
