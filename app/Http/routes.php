@@ -27,6 +27,10 @@ Route::resource('usuario', 'UsuarioControlador');
 Route::resource('indicadores','IndicadorControlador');
 
 Route::resource('tareas','tareaControlador');
+<<<<<<< HEAD
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+=======
+Route::resource('reporte','ReporteControlador');
+>>>>>>> b6dce23da988d5353a31867fc2133e4ef9c6b0e1
