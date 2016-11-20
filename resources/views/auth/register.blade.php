@@ -9,9 +9,7 @@
     <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href="{{ url('/home') }}"><b>Restaurante Rancho Edén</b></a>
-
-            <a href="{{ url('/home') }}"><b>Restaurante Rancho Eden</b></a>
+            <a href="{{ url('/') }}"><b>Restaurante Rancho Edén</b></a>
         </div>
 
         @if (count($errors) > 0)
