@@ -12,8 +12,27 @@
 					   <div class="form-group">
 						   {!! Form::label('tarea','Tareas del indicador')!!}
 
-						    
+						     <p>hay {{$tareas->total()}} registros</p>
+						       <table class="table table-striped">
+						         <tr>
+						           <th>Id</th>
+						           <th>Descripcion</th>
+						           <th>Estado</th>
+						          
+						         </tr>
 
+						         @foreach ($tareas as $tarea)
+
+						         <tr>
+						           <td>{{$tarea->id_tarea}}</td>                 
+						           <td>{{$tarea->descripcion}}</td>  
+						           <td>{{$tarea->estado}}</td>  
+
+
+						         </tr>
+						         @endforeach
+						       </table>
+						     {!! $tareas->render() !!}
 						   </div>
 						  <div class="form-group">
 						   <p style="text-align: center;">TABLA DE ANALISIS DE INDICADOR</p>
