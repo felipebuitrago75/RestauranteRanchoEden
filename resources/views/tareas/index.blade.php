@@ -20,7 +20,7 @@
               </tr>
 
               @foreach ($tareas as $tarea)
-
+            
               <tr>
                 <td>{{$tarea->id_tarea}}</td>                 
                 <td>{{$tarea->descripcion}}</td>  
@@ -28,7 +28,9 @@
 
 
               </tr>
+              @endif
               @endforeach
+
             </table>
           {!! $tareas->render() !!}
         </div>

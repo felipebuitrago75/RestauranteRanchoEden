@@ -30,8 +30,14 @@
                 <td>{{$indicador->descripcion}}</td>  
                 <td>{{$indicador->fecha}}</td> 
                 <td>
-                
-                   <a class="btn btn-info" href="{{URL::action('tareaControlador@index',$indicador->id_indicador)}}" role="button">Tareas</a>
+                     @foreach($tareas as $tarea)
+                      @if(($indicador->id_indicador)=== $tarea->indicador_id_indicador)
+                     <a class="btn btn-info" href="{{URL::action('tareaControlador@index',$indicador->id_indicador)}}" role="button">Tareas</a>
+                    @endif  
+                    @endforeach
+                  </ul>
+                </div>
+                  
 
                 </td>
 
