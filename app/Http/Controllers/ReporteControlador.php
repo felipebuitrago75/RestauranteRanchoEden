@@ -30,7 +30,7 @@ class ReporteControlador extends Controller
      * @return  view tareas.edit retorna la vista para editar las tareas.
      */
     public function edit($id){
-        return view("reportes.index",["indicador"=>Indicador::findOrFail($id)]);
+        return view("reporte.edit",["indicador"=>Indicador::findOrFail($id)]);
         
     }
 }

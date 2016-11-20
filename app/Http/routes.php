@@ -27,4 +27,4 @@ Route::resource('usuario', 'UsuarioControlador');
 Route::resource('indicadores','IndicadorControlador');
 
 Route::resource('tareas','tareaControlador');
-Route::resource('reportes','ReporteControlador');
+Route::resource('reporte','ReporteControlador');
