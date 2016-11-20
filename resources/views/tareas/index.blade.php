@@ -18,9 +18,10 @@
                 <th>Estado</th>
                
               </tr>
-
+              @foreach ($indicadores as $indicador)
               @foreach ($tareas as $tarea)
-            
+             @if(($indicador->id_indicador)=== $tarea->indicador_id_indicador)
+
               <tr>
                 <td>{{$tarea->id_tarea}}</td>                 
                 <td>{{$tarea->descripcion}}</td>  
@@ -30,7 +31,7 @@
               </tr>
               @endif
               @endforeach
-
+              @endforeach
             </table>
           {!! $tareas->render() !!}
         </div>
