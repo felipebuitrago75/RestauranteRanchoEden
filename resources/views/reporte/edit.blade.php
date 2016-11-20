@@ -35,7 +35,7 @@
 						        @endforeach
 						        @endforeach
 						      </table>
-						    {!! $tareas->render() !!}
+						    {!! $reporte->render() !!}
 						   
 						   </div>
 						  <div class="form-group">
