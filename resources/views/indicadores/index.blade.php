@@ -16,7 +16,7 @@
               <tr>
                 <th>Id</th>
                 <th>Nombre</th>
-                <th>Descripcion</th>
+                <th>Descripción</th>
                 <th>Fecha</th>
                 <th>Tareas</th>
                 <th>Acciones</th>
