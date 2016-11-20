@@ -1,3 +1,1 @@
-{{-- resources/views/emails/password.blade.php --}}
-
-{{ trans('adminlte_lang::message.passwordclickreset') }} <a href="{{ url('password/reset/'.$token) }}">{{ url('password/reset/'.$token) }}</a>
+Click here to reset your password: <a href="{{ $link = url('password/reset', $token).'?email='.urlencode($user->getEmailForPasswordReset()) }}"> {{ $link }} </a>

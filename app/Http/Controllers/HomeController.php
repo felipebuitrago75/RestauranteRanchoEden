@@ -1,23 +1,14 @@
 <?php
 
-/*
- * Taken from
- * https://github.com/laravel/framework/blob/5.2/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub
- */
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
-/**
- * Class HomeController
- * @package App\Http\Controllers
- */
 class HomeController extends Controller
 {
     /**
-     * Crea una nueva instancia de controlador.
+     * Create a new controller instance.
      *
      * @return void
      */
@@ -27,9 +18,9 @@ class HomeController extends Controller
     }
 
     /**
-     * Muestra el panel de la aplicación.
+     * Show the application dashboard.
      *
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
