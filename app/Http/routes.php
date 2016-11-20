@@ -27,3 +27,6 @@ Route::resource('usuario', 'UsuarioControlador');
 Route::resource('indicadores','IndicadorControlador');
 
 Route::resource('tareas','tareaControlador');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

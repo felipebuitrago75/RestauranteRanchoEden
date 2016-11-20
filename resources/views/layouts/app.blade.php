@@ -1,163 +1,82 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Restaurante Rancho Eden IDRA</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('css/AdminLTE.min.css')}}">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
-    <link rel="apple-touch-icon" href="{{asset('img/apple-touch-icon.png')}}">
-    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
-  <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
+    <title>Laravel</title>
 
-      <header class="main-header">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
-        <!-- Logo -->
-        <a href="{{route('indicadores.index')}}" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b></b>V</span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>IDRA<br> </b></span>
-        </a>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Navegación</span>
-          </a>
-          <!-- Navbar Right Menu -->
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <!-- Messages: style can be found in dropdown.less-->
-              
-              <!-- User Account: style can be found in dropdown.less -->
-              <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-red">Online</small>
-                  <span class="hidden-xs"> {{ Auth::user()->name }}</span>
+    <style>
+        body {
+            font-family: 'Lato';
+        }
+
+        .fa-btn {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body id="app-layout">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    Laravel
                 </a>
-                <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header">
-                    
-                    <p>
-                      Bienvenido 
-                      <small></small>
-                    </p>
-                  </li>
-                  
-                  <!-- Menu Footer-->
-                  <li class="user-footer">
-                    
-                    <div class="pull-right">
-                      <a href="{{ url('/logout') }}" class="btn btn-default btn-flat">Cerrar</a>
-                    </div>
-                  </li>
+            </div>
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/home') }}">Home</a></li>
                 </ul>
-              </li>
-              
-            </ul>
-          </div>
 
-        </nav>
-      </header>
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar user panel -->
-                    
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-            <li class="header"></li>
-            
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-laptop"></i>
-                <span>Indicadores</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="{{route('indicadores.create')}}"><i class="fa fa-circle-o"></i> Crear Indicador</a></li>
-                <li><a href="{{route('indicadores.index')}}"><i class="fa fa-circle-o"></i> Listar Indicadores</a></li>
-              </ul>
-            </li>
-                        
-          </ul>
-        </section>
-        <!-- /.sidebar -->
-      </aside>
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
 
-
-
-
-
-       <!--Contenido-->
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        
-        <!-- Main content -->
-        <section class="content">
-          
-          <div class="row">
-            <div class="col-md-12">
-              <div class="box">
-                <div class="box-header with-border">
-                  <h3 class="box-title">SISTEMA DE GESTIÓN DE INDICADORES AMBIENTALES : RESTAURANTE RANCHO EDEN</h3>
-                  <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    
-                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                  </div>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                                  <!--Contenido-->
-                              @yield('contenido')
-                              
-                                  <!--Fin Contenido-->
-                           </div>
-                        </div>
-                            
-                        </div>
-                    </div><!-- /.row -->
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-
-        </section><!-- /.content -->
-      </div><!-- /.content-wrapper -->
-      <!--Fin-Contenido-->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
+            </div>
         </div>
-        <strong>Copyright &copy; 2016-2020 </strong>Proyecto Final SW 3
-      </footer>
+    </nav>
 
-      
-    <!-- jQuery 2.1.4 -->
-    <script src="{{asset('js/jQuery-2.1.4.min.js')}}"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{asset('js/app.min.js')}}"></script>
-    
-  </body>
+    @yield('content')
+
+    <!-- JavaScripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+</body>
 </html>
