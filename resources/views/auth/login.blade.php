@@ -11,16 +11,7 @@
             <a href="{{ url('/') }}"><b>Restaurante Rancho Edén</b></a>
         </div><!-- /.login-logo -->
 
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> {{ trans('adminlte_lang::message.someproblems') }}<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+
 
     <div class="login-box-body">
     <p class="login-box-msg"> {{ trans('adminlte_lang::message.siginsession') }} </p>
