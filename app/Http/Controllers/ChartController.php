@@ -16,4 +16,9 @@ class ChartController extends Controller
 	{
 		# code...
 	}
+	public function index(){
+
+		$p = Indicador::select('tarea.descripcion','indicador.id_indicador')->join('tarea', 'tarea.id_tarea', '=', 'indicador.id_tarea')->get();
+		return view('reporte.edit',['p' => $p]);
+	}
 }
