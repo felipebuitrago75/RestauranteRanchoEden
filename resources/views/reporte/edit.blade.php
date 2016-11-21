@@ -6,7 +6,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading"> Nombre de indicador: <br>  {{$indicador-> nombre}}</div>
 
-				
+				{!! Form::model($reporte,['route' => ['reporte.getPDF',$reporte ],'method' =>'PUT']) !!}
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					</div>
 

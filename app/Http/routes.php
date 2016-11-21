@@ -21,10 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin', 'HomeController@index');
  
 });
-Route::get('edit', function(){
-	$pdf = PDF::loadView('/reporte/edit');
-	return $pdf ->download('reporte.pdf');
-});
+//Route::get('/getPDF', 'PDFController@getPDF');
 
  Route::post('/auth/login', 'Auth\AuthController@postLogin');
 Route::resource('usuario', 'UsuarioControlador');
