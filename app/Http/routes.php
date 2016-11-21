@@ -16,11 +16,13 @@ Route::get('/', function () {
 });
 
 
-Route::auth();
+Route::group(['middleware' => 'auth'], function () {
+    Route::auth();
+    Route::get('/admin', 'HomeController@index');
+ 
+});
 
-Route::get('/home', 'HomeController@index');
-
-
+ Route::post('/auth/login', 'Auth\AuthController@Login');
 Route::resource('usuario', 'UsuarioControlador');
 Route::resource('indicadores','IndicadorControlador');
 
