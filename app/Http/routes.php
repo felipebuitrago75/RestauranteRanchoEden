@@ -21,8 +21,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin', 'HomeController@index');
  
 });
-Route::get('reporte', function(){
-	$pdf = PDF::loadView('edit');
+Route::get('edit', function(){
+	$pdf = PDF::loadView('/reporte/edit');
 	return $pdf ->download('reporte.pdf');
 });
 
