@@ -21,7 +21,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin', 'HomeController@index');
  
 });
-Route::get('pdf', 'PDFController@getPDF');
 
  Route::post('/auth/login', 'Auth\AuthController@postLogin');
 Route::resource('usuario', 'UsuarioControlador');
@@ -29,3 +28,9 @@ Route::resource('indicadores','IndicadorControlador');
 
 Route::resource('tareas','tareaControlador');
 Route::resource('reporte','ReporteControlador');
+
+Route::get('reporte', [
+		'uses'	=> 'PDFController@generateReport',
+		'as'	=> 'reporte.edit'
+	]);
+	
