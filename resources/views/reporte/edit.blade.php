@@ -5,8 +5,10 @@
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default">
 				<div class="panel-heading"> Nombre de indicador: <br>  {{$indicador-> nombre}}</div>
-					  
+				{!! Form::model($indicador,['route' => ['reporte.edit',$indicador ],'method' =>'PUT']) !!}
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					</div>
+
 						  <div class="form-group">
 						   <p style="text-align: center;">TABLA DE ANALISIS DE INDICADOR</p>
 						   	
@@ -104,14 +106,43 @@
 						   </table>
 
 						  </div>
+
+						  <div>
+						  	<html>
+						  	  <head>
+						  	    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+						  	    <script type="text/javascript">
+						  	      google.charts.load("current", {packages:["corechart"]});
+						  	      google.charts.setOnLoadCallback(drawChart);
+						  	      function drawChart() {
+						  	        var data = google.visualization.arrayToDataTable([
+						  	          ['Tareas', 'Progreso'],
+						  	          ['Tarea 1',     11],
+						  	          ['Tarea 2',      2],
+						  	          ['Tarea 3',  2],
+						  	          ['Tarea 4', 2],
+						  	          ['Tarea 5',    7]
+						  	        ]);
+
+						  	        var options = {
+						  	          title: 'Progreso de Tareas',
+						  	          is3D: true,
+						  	        };
+
+						  	        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+						  	        chart.draw(data, options);
+						  	      }
+						  	    </script>
+						  	  </head>
+						  	  <body>
+						  	    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+						  	  </body>
+						  	</html>
+						  </div>>
 					
 						 
 						  <button type="submit" class="btn btn-default">DESCARGAR</button>
 					{!! Form::close() !!}
-
-
-
-
 				
 					
 					
