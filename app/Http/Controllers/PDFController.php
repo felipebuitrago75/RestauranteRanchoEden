@@ -11,10 +11,10 @@ use PDF;
 class PDFController extends Controller
 {
 
-	public function generateReport(){
+	public function generateReport($id){
 
-	    	
 			$pdf = \PDF::loadView('reporte.edit');
 			return $pdf->download('Reporte.pdf');
 	    }
+
 }
