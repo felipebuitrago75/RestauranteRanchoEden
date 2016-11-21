@@ -22,7 +22,12 @@ Route::group(['middleware' => 'auth'], function () {
  
 });
 
- Route::post('/auth/login', 'Auth\AuthController@Login');
+
+//logeo
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
 Route::resource('usuario', 'UsuarioControlador');
 Route::resource('indicadores','IndicadorControlador');
 
