@@ -3,16 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Foundation\Auth\User as Authenticatable;
 /**
  * Class Usuario
  * @package App\Usuario
  */
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
-    public function setPasswordAttribute($password){
-    $this->attributes['password'] = Hash::needsRehash($password) ? Hash::make($password) : $password;
-}
+
     // variable que almacena la tabla usuario proveniente de la base de datos.
     protected $table= 'usuario';
 
