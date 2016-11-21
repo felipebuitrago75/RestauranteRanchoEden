@@ -6,7 +6,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading"> Nombre de indicador: <br>  {{$indicador-> nombre}}</div>
 
-				{!! Form::model($indicador,['route' => ['reporte.getPDF',$indicador ],'method' =>'PUT']) !!}
+				
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					</div>
 
@@ -142,7 +142,7 @@
 						  </div>>
 					
 						 
-					<button type="submit" class="btn btn-default"> DESCARGAR </button>
+					  <a class="btn btn-info" href="{{route('pdf.getPDF')}}" role="button" >Descargar</a>
 					{!! Form::close() !!}
 				
 					

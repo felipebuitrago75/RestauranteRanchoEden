@@ -29,3 +29,5 @@ Route::resource('indicadores','IndicadorControlador');
 
 Route::resource('tareas','tareaControlador');
 Route::resource('reporte','ReporteControlador');
+
+Route::resource('pdf','PDFController');
