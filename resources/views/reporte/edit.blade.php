@@ -118,11 +118,10 @@
 						  	      function drawChart() {
 						  	        var data = google.visualization.arrayToDataTable([
 						  	          ['Tareas', 'Progreso'],
-						  	          ['Tarea 1',     11],
-						  	          ['Tarea 2',      2],
-						  	          ['Tarea 3',  2],
-						  	          ['Tarea 4', 2],
-						  	          ['Tarea 5',    7]
+						  	          @foreach ($p as $pastel)
+						  	          ['{{$pastel->descripcion}}',{{$pastel->id_indicador}}],
+						  	          	
+						  	          @endforeach 
 						  	        ]);
 
 						  	        var options = {
@@ -142,7 +141,7 @@
 						  </div>>
 					
 						 
-					  <a class="btn btn-info" href="{{ route('reporte.edit', $indicador->id) }}" role="button" >Descargar</a>
+					  <a class="btn btn-info" href="{{ route('reporte.edit', $indicador->id) }}" role="button"> Descargar</a>
 					{!! Form::close() !!}
 				
 					

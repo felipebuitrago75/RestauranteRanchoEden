@@ -40,7 +40,7 @@
     </form>
 
 
-    <a href="{{ url('/password/reset') }}">{{ trans('adminlte_lang::message.forgotpassword') }}</a><br>
+    
     <a href="{{ url('/register') }}" class="text-center">Registrar un nuevo miembro</a>
 
 </div><!-- /.login-box-body -->
