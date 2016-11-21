@@ -142,7 +142,7 @@
 						  </div>>
 					
 						 
-					  <a class="btn btn-info" href="{{route('pdf')}}" role="button" >Descargar</a>
+					  <a class="btn btn-info" role="button" >Descargar</a>
 					{!! Form::close() !!}
 				
 					
