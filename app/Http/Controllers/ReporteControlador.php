@@ -33,7 +33,7 @@ class ReporteControlador extends Controller
     public function edit($id){
 
         $prueba = tarea::select('descripcion','estado')->get();
-        return view("reporte.edit", compact('prueba'),["indicador"=>Indicador::findOrFail($id)]);
+        return view("reporte.edit", ['prueba'=>$prueba]);
         
     }
 }
