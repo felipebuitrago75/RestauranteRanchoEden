@@ -37,10 +37,12 @@ class PDFController extends Controller
 		    $excel->sheet('Indicadores', function($sheet) use ($export) {
 
 		        $sheet->fromArray($export);
+
+		       });
 		    $excel->sheet('Tareas', function($sheet) use ($export2){
 		    	$sheet->fromArray($export2);
 
-		    	 });
+		    	
 
 		    });
 
