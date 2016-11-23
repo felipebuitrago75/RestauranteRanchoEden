@@ -34,8 +34,4 @@ Route::resource('indicadores','IndicadorControlador');
 Route::resource('tareas','tareaControlador');
 Route::resource('reporte','ReporteControlador');
 
-Route::get('indicadores', [
-		'uses'	=> 'PDFController@index',
-		'as'	=> 'indicadores'
-	]);
-	
+Route::resource('excel','PDFController');

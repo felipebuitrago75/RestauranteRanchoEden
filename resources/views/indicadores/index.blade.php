@@ -48,7 +48,7 @@
             </table>
           {!! $indicadores->render() !!}
         </div>
-        <a class="btn btn-info" href="{{ URL('indicadores') }}" role="button"> Descargar</a>
+        <a class="btn btn-info" href="{{ URL('excel') }}" role="button"> Descargar</a>
         
       </div>
     </div>
