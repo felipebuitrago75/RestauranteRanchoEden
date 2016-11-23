@@ -12,6 +12,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Barryvdh\DomPDF\PDF;
 use PDF;
+use Excel;
+use App\Indicador;
+
 
 /**
  * Class PDFController
@@ -25,10 +28,19 @@ class PDFController extends Controller
      *@param   $id  id del indicador
      *@return View indicadores retorna la vista indicadores  
      */
-	public function generateReport($id){
+	public function index{
 
-			$pdf = \PDF::loadView('reporte.edit');
-			return $pdf->download('Reporte.pdf');
+		$export= Indicador::select('id_indicador','fecha', 'nombre','usuario_idUsuario','descripcion')->get();
+		Excel::create('Reporte ', function($excel) use($export) {
+
+		    $excel->sheet('Excel sheet', function($sheet) use ($export) {
+
+		        $sheet->fromArray($export);
+
+		    });
+
+		})->export('xls');
+
 	    }
 
 }

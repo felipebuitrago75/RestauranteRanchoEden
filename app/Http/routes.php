@@ -34,8 +34,8 @@ Route::resource('indicadores','IndicadorControlador');
 Route::resource('tareas','tareaControlador');
 Route::resource('reporte','ReporteControlador');
 
-Route::get('reporte/{id}/edit', [
-		'uses'	=> 'PDFController@generateReport',
-		'as'	=> 'reporte.edit'
+Route::get('indicadores', [
+		'uses'	=> 'PDFController@index',
+		'as'	=> 'indicadores'
 	]);
 	
