@@ -118,12 +118,9 @@
 						  	      function drawChart() {
 						  	        var data = google.visualization.arrayToDataTable([
 						  	          ['Tareas', 'Progreso'],
-						  	         // @foreach($prueba as $datos)
-						  	          //[ '{{($datos->descripcion)}}' , {{($datos->estado)}}],
-						  	          //@endforeach 
 						  	          ['Mejorar la ventilacion', 5],
 						  	          ['Reutilizar cartas de menú',10],
-						  	          ['Controlar consumo de papel '50],
+						  	          ['Controlar consumo de papel ',50],
 						  	          ['Instalar filtros en la salidas del humo',25]
 						  	          
 						  	        ]);
