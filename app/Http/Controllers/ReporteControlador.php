@@ -13,7 +13,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB ;
 use Auth;
-use App\tarea;
+use App\tarea
 use Carbon\Carbon;
 class ReporteControlador extends Controller
 {
@@ -33,7 +33,7 @@ class ReporteControlador extends Controller
     public function edit($id){
 
         $prueba = tarea::select('descripcion','estado')->get();
-        return view("reporte.edit", ['prueba'=>$prueba]);
+        return view("reporte.edit",["indicador"=>Indicador::findOrFail($id)]);
         
     }
 }
