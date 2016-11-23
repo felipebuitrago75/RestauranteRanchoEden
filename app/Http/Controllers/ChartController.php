@@ -20,6 +20,6 @@ class ChartController extends Controller
 	public function index(){
 
 		$prueba = tarea::select('descripcion','estado')->get();
-		return view('edit', )['prueba'=> $prueba];
+		return view('edit',['prueba'=> $prueba]);
 	}
 }
