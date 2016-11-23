@@ -142,7 +142,7 @@
 						  </div>>
 					
 						 
-					  <a class="btn btn-info" href="{{ route('reporte.edit', $indicador->id) }}" role="button"> Descargar</a>
+				
 					{!! Form::close() !!}
 				
 					

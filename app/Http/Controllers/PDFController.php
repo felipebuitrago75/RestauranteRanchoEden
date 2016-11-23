@@ -12,6 +12,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Excel;
 use App\Indicador;
+use App\tarea;
 
 
 /**
@@ -29,11 +30,17 @@ class PDFController extends Controller
 	public function index(){
 
 		$export= Indicador::select('id_indicador','fecha', 'nombre','usuario_idUsuario','descripcion')->get();
+		$export2=tarea::select('id_tarea','descripcion', 'estado', 'indicador_id_indicador')->get();
+
 		Excel::create('Reporte ', function($excel) use($export) {
 
-		    $excel->sheet('Excel sheet', function($sheet) use ($export) {
+		    $excel->sheet('Indicadores', function($sheet) use ($export) {
 
 		        $sheet->fromArray($export);
+		    $excel->sheet('Tareas', function($sheet) use ($export2){
+		    	$sheet->fromArray($export2);
+
+		    	 });
 
 		    });
 
