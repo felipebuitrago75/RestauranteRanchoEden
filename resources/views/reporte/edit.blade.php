@@ -118,7 +118,7 @@
 						  	      function drawChart() {
 						  	        var data = google.visualization.arrayToDataTable([
 						  	          ['Tareas', 'Progreso'],
-						  	          @foreach ($prueba as $datos)
+						  	          @foreach($prueba as $datos)
 						  	          [ '{{($datos->descripcion)}}' , {{($datos->estado)}}]
 						  	          @endforeach
 						  	          
