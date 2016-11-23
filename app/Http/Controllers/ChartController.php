@@ -19,7 +19,7 @@ class ChartController extends Controller
 	}
 	public function index($id){
 
-		$prueba = tarea::select('descripcion','estado')->get();
+		//$prueba = tarea::select('descripcion','estado')->get();
 		return view('reporte.edit', compact('prueba'));
 	}
 }
