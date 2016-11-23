@@ -28,7 +28,7 @@ class PDFController extends Controller
      *@param   $id  id del indicador
      *@return View indicadores retorna la vista indicadores  
      */
-	public function index{
+	public function index(){
 
 		$export= Indicador::select('id_indicador','fecha', 'nombre','usuario_idUsuario','descripcion')->get();
 		Excel::create('Reporte ', function($excel) use($export) {
