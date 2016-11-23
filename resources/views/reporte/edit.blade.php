@@ -119,8 +119,8 @@
 						  	        var data = google.visualization.arrayToDataTable([
 						  	          ['Tareas', 'Progreso'],
 						  	          @foreach($prueba as $datos)
-						  	          [ '{{($datos->descripcion)}}' , {{($datos->estado)}}]
-						  	          @endforeach
+						  	          [ '{{($datos->descripcion)}}' , {{($datos->estado)}}],
+						  	          @endforeach 
 						  	          
 						  	        ]);
 
