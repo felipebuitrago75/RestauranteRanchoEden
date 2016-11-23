@@ -29,9 +29,10 @@ class PDFController extends Controller
      */
 	public function index(){
 
-		$export= Indicador::select('id_indicador','fecha', 'nombre','usuario_idUsuario','descripcion')->get();
-		$export2=tarea::select('id_tarea','descripcion', 'estado', 'indicador_id_indicador')->get();
+		 $excel->setTitle('Tabla de Indicadores');
 
+		$export= Indicador::select('id_indicador','fecha', 'nombre','usuario_idUsuario','descripcion')->get();
+		
 		Excel::create('Reporte ', function($excel) use($export) {
 
 		    $excel->sheet('Indicadores', function($sheet) use ($export) {
@@ -39,12 +40,7 @@ class PDFController extends Controller
 		        $sheet->fromArray($export);
 
 		       });
-		    $excel->sheet('Tareas', function($sheet) use ($export2){
-		    	$sheet->fromArray($export2);
-
-		    	
-
-		    });
+		   
 
 		})->export('xls');
 

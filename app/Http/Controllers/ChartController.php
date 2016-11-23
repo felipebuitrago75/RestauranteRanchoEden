@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Indicador;
+use App\tarea;
 use App\Http\Requests;
 
 /**
@@ -18,7 +19,7 @@ class ChartController extends Controller
 	}
 	public function index(){
 
-		$p = Indicador::select('tarea.descripcion','indicador.id_indicador')->join('tarea', 'tarea.id_tarea', '=', 'indicador.id_tarea')->get();
-		return view('reporte.edit',['p' => $p]);
+		$prueba = tarea::select('descripcion','estado')->get();
+		return view('edit', )['prueba'=> $prueba];
 	}
 }
