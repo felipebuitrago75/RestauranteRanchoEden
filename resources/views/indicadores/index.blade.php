@@ -49,6 +49,7 @@
           {!! $indicadores->render() !!}
         </div>
         <a class="btn btn-info" href="{{ URL('excel') }}" role="button"> Descargar</a>
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         
       </div>
     </div>
