@@ -13,8 +13,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB ;
 use Auth;
-use App\tarea
+use App\tarea;
 use Carbon\Carbon;
+
 class ReporteControlador extends Controller
 {
      /**
