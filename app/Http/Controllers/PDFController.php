@@ -27,7 +27,7 @@ class PDFController extends Controller
      *@param   $id  id del indicador
      *@return View indicadores retorna la vista indicadores  
      */
-	public function index($id){
+	public function index(){
 
 		 $excel->setTitle('Tabla de Indicadores');
 
