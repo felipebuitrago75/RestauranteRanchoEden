@@ -29,8 +29,6 @@ class PDFController extends Controller
      */
 	public function index(){
 
-		 $excel->setTitle('Tabla de Indicadores');
-
 		$export= Indicador::select('id_indicador','fecha', 'nombre','usuario_idUsuario','descripcion')->get();
 		
 		Excel::create('Reporte ', function($excel) use($export) {
@@ -44,6 +42,6 @@ class PDFController extends Controller
 
 		})->export('xls');
 
-	    }
+	   }
 
 }
