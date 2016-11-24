@@ -36,4 +36,9 @@ class ReporteControlador extends Controller
         return view("reporte.edit",["indicador"=>Indicador::findOrFail($id)]);
         
     }
+    public function generarGrafica(){
+
+        $tareas=tarea::select('descripcion','estado');
+        
+    }
 }

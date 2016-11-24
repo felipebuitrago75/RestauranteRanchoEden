@@ -118,11 +118,11 @@
 						  	      function drawChart() {
 						  	        var data = google.visualization.arrayToDataTable([
 						  	          ['Tareas', 'Progreso'],
-						  	          ['Tarea 1',     11],
-						  	          ['Tarea 2',      2],
-						  	          ['Tarea 3',  2],
-						  	          ['Tarea 4', 2],
-						  	          ['Tarea 5',    7]
+						  	          ['Reutilizar cartas de menú',     5],
+						  	          ['Controlar consumo de papel',      40],
+						  	          ['Evitar utilizar quimicos contaminantes',  15],
+						  	          ['Mejorar ventilación', 12],
+						  	          ['Instalar filtros en salidad de humo',    20]
 						  	        ]);
 						  	        var options = {
 						  	          title: 'Progreso de Tareas',
