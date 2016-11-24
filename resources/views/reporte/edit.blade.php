@@ -118,18 +118,16 @@
 						  	      function drawChart() {
 						  	        var data = google.visualization.arrayToDataTable([
 						  	          ['Tareas', 'Progreso'],
-						  	          ['Mejorar la ventilacion', 5],
-						  	          ['Reutilizar cartas de menú',10],
-						  	          ['Controlar consumo de papel ',50],
-						  	          ['Instalar filtros en la salidas del humo',25]
-						  	          
+						  	          ['Tarea 1',     11],
+						  	          ['Tarea 2',      2],
+						  	          ['Tarea 3',  2],
+						  	          ['Tarea 4', 2],
+						  	          ['Tarea 5',    7]
 						  	        ]);
-
 						  	        var options = {
 						  	          title: 'Progreso de Tareas',
 						  	          is3D: true,
 						  	        };
-
 						  	        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
 						  	        chart.draw(data, options);
 						  	      }
@@ -141,9 +139,11 @@
 						  	</html>
 						  </div>>
 					
-							
+						 
+					  <a class="btn btn-info" href="{{ route('reporte.edit', $indicador->id) }}" role="button"> Descargar</a>
 					{!! Form::close() !!}
-			
+				
+					
 					
 				</div>
 				

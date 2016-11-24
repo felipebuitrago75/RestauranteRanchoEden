@@ -33,7 +33,6 @@ class ReporteControlador extends Controller
      */
     public function edit($id){
 
-       /
         return view("reporte.edit",["indicador"=>Indicador::findOrFail($id)]);
         
     }
