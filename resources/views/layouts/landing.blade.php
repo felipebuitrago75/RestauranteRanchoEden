@@ -86,7 +86,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <h1><a href="#">Gestión de Indicadores Ambientales</a></h1>
                 <h3>  
                 </h3>
-                <h3><a href="{{ url('/register') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
+                <h3><a href="{{ url('/indicadoresInicio
+') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
             </div>
             <div class="col-lg-2">
                 <h5>Quindio, Sabor y Descanso</h5>
