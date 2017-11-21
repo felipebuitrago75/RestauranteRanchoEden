@@ -17,7 +17,7 @@
                                 <th>Descripción</th>
                                 <th>Fecha</th>
                                 <th>Tareas</th>
-					     <th>Acciones</th>
+					            <th>Acciones</th>
 
 
                             </tr>
@@ -30,7 +30,7 @@
                                     <td>{{$indicador->descripcion}}</td>
                                     <td>{{$indicador->fecha}}</td>
                                     <td>
-                                        <a class="btn btn-info" href="{{URL::action('TareaControladorInicio@index',$indicador-id_indicador)}}" role="button">Tareas</a>
+                                        <a class="btn btn-info" href="{{URL::action('TareaControladorInicio@index',$indicador->id_indicador)}}" role="button">Tareas</a>
 
 <td>
 
