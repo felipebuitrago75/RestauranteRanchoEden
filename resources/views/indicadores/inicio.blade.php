@@ -17,6 +17,8 @@
                                 <th>Descripción</th>
                                 <th>Fecha</th>
                                 <th>Tareas</th>
+					     <th>Acciones</th>
+
 
                             </tr>
 
@@ -30,6 +32,12 @@
                                     <td>
                                         <a class="btn btn-info" href="{{URL::action('tareaControlador@index',$indicador->id_indicador)}}" role="button">Tareas</a>
 
+<td>
+
+   <a href="{{URL::action('ReporteControlador@edit',$indicador->id_indicador)}}">Reporte</a>
+
+
+                                    </td>
 
 
                                 </tr>
@@ -37,6 +45,9 @@
                         </table>
                         {!! $indicadores->render() !!}
                     </div>
+
+                    <a class="btn btn-info" href="{{ URL('excel') }}" role="button"> Descargar</a>
+
 
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
