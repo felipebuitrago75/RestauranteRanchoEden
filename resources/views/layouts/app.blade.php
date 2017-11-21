@@ -25,7 +25,7 @@
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="{{route ('/')}}" class="logo">
+        <a href="{{url('/')}}" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b></b>V</span>
           <!-- logo for regular state and mobile devices -->
@@ -38,7 +38,7 @@
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Navegación</span>
           </a>
-          <!-- Navbar Right Menu -->
+          <!-- Navbar Right Menu -->	
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
