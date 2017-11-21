@@ -33,6 +33,8 @@ Route::resource('indicadores','IndicadorControlador');
 Route::resource('indicadoresInicio','IndicadorControladorInicio');
 
 Route::resource('tareas','tareaControlador');
+Route::resource('tareaInicio','TareaControladorInicio');
+
 Route::resource('reporte','ReporteControlador');
 
 Route::resource('excel','PDFController');
