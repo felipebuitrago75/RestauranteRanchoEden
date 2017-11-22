@@ -6,7 +6,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading"> Tareas</div>
                     <div class="panel-body">
-                        Listadoooooooooooooo de Tareas
+                        Listado de Tareas
                         <p>
 
                         </p>

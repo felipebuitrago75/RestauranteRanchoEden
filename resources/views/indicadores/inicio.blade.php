@@ -32,12 +32,12 @@
                                     <td>
                                         <a class="btn btn-info" href="{{URL::action('TareaControladorInicio@index',$indicador->id_indicador)}}" role="button">Tareas</a>
 
-<td>
+                                <td>
 
-   <a href="{{URL::action('ReporteControlador@edit',$indicador->id_indicador)}}">Reporte</a>
+                                <a href="{{URL::action('ReporteControladorInicio@edit',$indicador->id_indicador)}}">Reporte</a>
 
 
-                                    </td>
+                                </td>
 
 
                                 </tr>

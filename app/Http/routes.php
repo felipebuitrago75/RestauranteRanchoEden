@@ -36,5 +36,6 @@ Route::resource('tareas','tareaControlador');
 Route::resource('tareaInicio','TareaControladorInicio');
 
 Route::resource('reporte','ReporteControlador');
+Route::resource('reporteInicio','ReporteControladorInicio');
 
 Route::resource('excel','PDFController');
