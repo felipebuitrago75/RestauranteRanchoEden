@@ -115,22 +115,21 @@
 						  	    <script type="text/javascript">
 						  	      google.charts.load("current", {packages:["corechart"]});
 						  	      google.charts.setOnLoadCallback(drawChart);
-						  	      function drawChart() {
-						  	        var data = google.visualization.arrayToDataTable([
-						  	          ['Tareas', 'Progreso'],
-						  	          ['Reutilizar cartas de menú',     5],
-						  	          ['Controlar consumo de papel',      40],
-						  	          ['Evitar utilizar quimicos contaminantes',  15],
-						  	          ['Mejorar ventilación', 12],
-						  	          ['Instalar filtros en salidad de humo',    20]
-						  	        ]);
-						  	        var options = {
-						  	          title: 'Progreso de Tareas',
-						  	          is3D: true,
-						  	        };
-						  	        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-						  	        chart.draw(data, options);
-						  	      }
+						  	      @foreach ($tareas as $tarea)
+                           	 function drawChart() {
+                                var data = google.visualization.arrayToDataTable([
+                                    
+                                     ['Tareas', 'Progreso'],
+                                    ['{{$tarea->descripcion}}',    {{$tarea->estado}}]
+                                ]);
+                                var options = {
+                                    title: 'Progreso de Tareas',
+                                    is3D: true,
+                                };
+                                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                                chart.draw(data, options);
+                            }
+                            @endforeach
 						  	    </script>
 						  	  </head>
 						  	  <body>

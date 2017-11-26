@@ -15,7 +15,7 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Descripcion</th>
-                                <th>Estado</th>
+                                <th>Progreso (%)</th>
 
                             </tr>
                             @foreach ($indicadores as $indicador)
@@ -25,7 +25,7 @@
                                         <tr>
                                             <td>{{$tarea->id_tarea}}</td>
                                             <td>{{$tarea->descripcion}}</td>
-                                            <td>{{$tarea->estado}}</td>
+                                             <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>
 
 
                                         </tr>
