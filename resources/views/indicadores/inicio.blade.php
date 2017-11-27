@@ -34,7 +34,7 @@
 
                                 <td>
 
-                                <a href="{{URL::action('ReporteControladorInicio@edit',$indicador->id_indicador)}}">Reporte</a>
+                                <a href="{{URL::action('ReporteControlador@edit',$indicador->id_indicador)}}"><img src="img/reporteIndicador.png" title="Reporte"></a>
 
 
                                 </td>
