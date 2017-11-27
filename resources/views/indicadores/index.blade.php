@@ -33,10 +33,9 @@
               <a class="btn btn-info" href="{{URL::action('tareaControlador@index',$indicador->id_indicador)}}" role="button">Tareas</a>
 
                 <td>
-                 <a href="{{URL::action('tareaControlador@edit',$indicador->id_indicador)}}">Agregar Tareas</a>
-                  <a href="{{URL::action('IndicadorControlador@edit',$indicador->id_indicador)}}">Editar Indicador</a>
-                  <a href="{{URL::action('ReporteControlador@edit',$indicador->id_indicador)}}">Reporte</a>
-
+                <a href="{{URL::action('tareaControlador@edit',$indicador->id_indicador)}}"><img src="img/agregarTarea.png" title="Agregar tarea"></a>
+                  <a href="{{URL::action('IndicadorControlador@edit',$indicador->id_indicador)}}"><img src="img/logoEditarIndicador.png" title="Editar indicador"></a>
+                  <a href="{{URL::action('ReporteControlador@edit',$indicador->id_indicador)}}"><img src="img/reporteIndicador.png" title="Reporte"></a>
              
                 </td>
 
