@@ -16,6 +16,8 @@
                 <th>Id</th>
                 <th>Descripcion</th>
                 <th>Progreso (%)</th>
+                 <th>Acciones</th>
+
                
               </tr>
               @foreach ($indicadores as $indicador)
@@ -26,6 +28,7 @@
                 <td>{{$tarea->id_tarea}}</td>                 
                 <td>{{$tarea->descripcion}}</td>  
                  <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>  
+                 <td><a href="{{URL::action('tareaControlador@edit',$tarea->id_tarea)}}"><img src="img/logoEditarTarea.png" title="Editar"></a></td>
 
 
               </tr>
