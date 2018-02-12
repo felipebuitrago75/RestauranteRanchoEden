@@ -30,4 +30,5 @@ class IndicadorControladorInicio extends Controller
         return view('indicadores.inicio',compact('indicadores','tareas'));
 
     }
+    
 }

@@ -13,6 +13,7 @@ use App\Http\Controllers\Controller;
 use App\Indicador;
 use DB;
 use Carbon\Carbon;
+use App\Http\Requests\IndicadorFormRequest;
 use Auth;
 use Illuminate\Support\Facades\Redirect;
 
