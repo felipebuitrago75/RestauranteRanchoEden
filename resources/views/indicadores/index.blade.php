@@ -23,7 +23,7 @@
               </tr>
 
               @foreach ($indicadores as $indicador)
-
+              @foreach ($tareas as $tarea)
               <tr>
                 <td>{{($indicador->id_indicador)}}</td> 
                 <td>{{$indicador->nombre}}</td> 
@@ -43,6 +43,7 @@
 
 
               </tr>
+              @endforeach
               @endforeach
             </table>
           {!! $indicadores->render() !!}
