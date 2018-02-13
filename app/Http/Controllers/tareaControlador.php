@@ -82,7 +82,7 @@ class tareaControlador extends Controller
      * @return  view tareas.edit retorna la vista para editar las tareas.
      */
     public function edit($id){
-        return view("tareas.create",["indicador"=>Indicador::findOrFail($id)]);
+        return view("tareas.create",["tarea"=>tarea::findOrFail($id), "indicador"=>Indicador::findOrFail($id)]);
         
     }
      /**
