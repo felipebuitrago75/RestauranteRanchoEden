@@ -61,7 +61,7 @@ class tareaControlador extends Controller
         $tareas = new tarea($request->all());
         $tareas->descripcion=$request->get('descripcion');
         $tareas->estado=$request->get('estado');
-        $tareas->indicador_id_indicador=$request->get('id_indicador');
+        $tareas->indicador_id_indicador= $request->get('id_indicador');
         $tareas->save();
         
        return Redirect::to('indicadores');
@@ -82,7 +82,7 @@ class tareaControlador extends Controller
      * @return  view tareas.edit retorna la vista para editar las tareas.
      */
     public function edit($id){
-        return view("tareas.create",["tarea"=>tarea::findOrFail($id), "indicador"=>Indicador::find($id)]);
+        return view("tareas.create",["indicador"=>Indicador::findOrFail($id)]);
         
     }
      /**
