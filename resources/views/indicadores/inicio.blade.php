@@ -30,7 +30,7 @@
                                     <td>{{$indicador->descripcion}}</td>
                                     <td>{{$indicador->fecha}}</td>
                                     <td>
-                                        <a class="btn btn-info" href="{{URL::action('TareaControladorInicio@index',$indicador->id_indicador)}}" role="button">Tareas</a>
+                                        <a class="btn btn-info" href="{{URL::action('TareaControladorInicio@edit',$indicador->id_indicador)}}" role="button">Tareas</a>
 
                                 <td>
 
