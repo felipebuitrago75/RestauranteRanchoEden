@@ -18,29 +18,22 @@
                                 <th>Progreso (%)</th>
 
                             </tr>
-                            @foreach ($indicadores as $indicador)
-                                @foreach ($tareas as $tarea)
-                                    @if(($indicador->id_indicador)=== $tarea->indicador_id_indicador)
-
-                                        <tr>
+                             <tr>
+                                            @foreach($tareas as $tarea)
+                                                @if($indicadores->id_indicador == $tarea->indicador_id_indicador)
                                             <td>{{$tarea->id_tarea}}</td>
                                             <td>{{$tarea->descripcion}}</td>
-                                             <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>
+                                            <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>
 
 
                                         </tr>
-                                    @endif
-                                @endforeach
-                            @endforeach
+                            @endif
+                        @endforeach
                         </table>
-                        {!! $tareas->render() !!}
+                        
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
-
-
 @endsection

@@ -31,7 +31,7 @@ class ReporteControladorInicio extends Controller
     }
     public function edit($id){
 
-         $indicador =Indicador::findOrFail($id);
+        $indicador =Indicador::findOrFail($id);
         $tareas=tarea::paginate();
         return view('reporte.editInicio',compact('indicador','tareas'));
 

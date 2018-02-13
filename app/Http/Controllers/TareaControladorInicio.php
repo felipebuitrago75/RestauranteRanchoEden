@@ -35,10 +35,17 @@ class TareaControladorInicio extends Controller
      */
     public function index(Request $request){
 
-        $indicadores =Indicador::paginate(5);
-        $tareas=tarea::paginate();
-
-        return view('tareas.inicio',compact('indicadores','tareas'));
+       
+    }
+    /**
+     * Función para editar las tareas en la tabla.
+     * @param $id Id de la tarea
+     * @return  view tareas.edit retorna la vista para editar las tareas.
+     */
+    public function edit($id){
+        $indicadores = Indicador::find($id);
+        $tareas = tarea::paginate();
+        return view("tareas.inicio",compact('indicadores','tareas'));
     }
 
 }

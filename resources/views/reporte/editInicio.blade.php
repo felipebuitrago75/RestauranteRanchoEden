@@ -120,8 +120,10 @@
                                 var data = google.visualization.arrayToDataTable([
                                     
                                     ['Tareas', 'Progreso'],
-                                        @foreach ($tareas as $tarea)
+                                       @foreach ($tareas as $tarea)
+                                        @if($indicador->id_indicador == $tarea->indicador_id_indicador)
                                     ['{{$tarea->descripcion}}',    {{$tarea->estado}}],
+                                    @endif
                                     @endforeach
                                 ]);
                                 var options = {
@@ -150,8 +152,10 @@
                                 function drawStuff() {
                                     var data = new google.visualization.arrayToDataTable([
                                         ['Tareas', 'Progreso'],
-                                            @foreach ($tareas as $tarea)
+                                           @foreach ($tareas as $tarea)
+                                            @if($indicador->id_indicador == $tarea->indicador_id_indicador)
                                         ['{{$tarea->descripcion}}',    {{$tarea->estado}}],
+                                        @endif
                                         @endforeach
 
                                     ]);
