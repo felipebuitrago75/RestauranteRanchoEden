@@ -34,10 +34,7 @@ class tareaControlador extends Controller
      */
     public function index(Request $request){
         
-        $indicadores =Indicador::paginate(5);
-        $tareas=tarea::paginate();
-
-        return view('tareas.index',compact('indicadores','tareas'));
+        return Redirect::to('indicadores');
     }
 
   /**
@@ -74,7 +71,9 @@ class tareaControlador extends Controller
      * @return  view tareas.show retorna la lista de tareas.
      */
     public function show($id){
-        return view("tareas.show",["tarea"=>tarea::findOrFail($id)]);
+       $indicadores = Indicador::find($id);
+        $tareas = tarea::paginate();
+        return view("tareas.index",compact('indicadores','tareas'));
     }
     /**
      * Función para editar las tareas en la tabla.
