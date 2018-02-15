@@ -94,6 +94,7 @@
                 <li><a href="{{route('indicadores.create')}}"><i class="fa fa-circle-o"></i> Crear Indicador</a></li>
                 <li><a href="{{route('indicadores.index')}}"><i class="fa fa-circle-o"></i> Listar Indicadores</a></li>
               </ul>
+               <img src="{{ asset('/img/logo2.png') }}">
             </li>
                         
           </ul>

@@ -68,6 +68,7 @@
                     <ul class="treeview-menu">
                         <li><a href="{{route('indicadoresInicio.index')}}"><i class="fa fa-circle-o"></i> Listar Indicadores</a></li>
                     </ul>
+                     <img src="{{ asset('/img/logo2.png') }}">
                 </li>
 
             </ul>
