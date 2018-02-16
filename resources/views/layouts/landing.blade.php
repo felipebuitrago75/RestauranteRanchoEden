@@ -58,9 +58,9 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#home" class="smoothScroll">{{ trans('adminlte_lang::message.home') }}</a></li>
-                <li><a href="#desc" class="smoothScroll">{{ trans('adminlte_lang::message.description') }}</a></li>
-                <li><a href="#showcase" class="smoothScroll">Galería</a></li>
-                <li><a href="#contact" class="smoothScroll">{{ trans('adminlte_lang::message.contact') }}</a></li>
+                <li class="active"><a href="#desc" class="smoothScroll">{{ trans('adminlte_lang::message.description') }}</a></li>
+                <li class="active"><a href="#showcase" class="smoothScroll">Galería</a></li>
+                <li class="active"><a href="#contact" class="smoothScroll">{{ trans('adminlte_lang::message.contact') }}</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
@@ -86,8 +86,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <h1>Gestión de Indicadores Ambientales</h1>
                 <h3>  
                 </h3>
-                <h3><a href="{{ url('/indicadoresInicio
-') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
+                <h3><a href="{{ url('/indicadoresInicio') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
             </div>
             <div class="col-lg-2">
                 <h5>Quindio, Sabor y Descanso</h5>
@@ -95,7 +94,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow1.png') }}">
             </div>
             <div class="col-lg-8">
-                <img class="img-responsive" src="{{ asset('/img/cuyabra.png') }}" alt="">
+                <img  src="{{ asset('/img/cuyabra.png') }}">
             </div>
             <div class="col-lg-2">
                 <br>
@@ -163,8 +162,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         <div id="collapseOne" class="accordion-body collapse in">
                             <div class="accordion-inner">
                                 <p>El Restaurante Rancho Edén fue fundado el 13 de Noviembre
-                                de 1998 producto de la visión de negocio por parte del señor Fernando Tobón y su esposa Silvia Elena Fajardo, quienes vieron una oportunidad de surguir en este campo de la economía.
-.</p>
+                                de 1998 producto de la visión de negocio por parte del señor Fernando Tobón y su esposa Silvia Elena Fajardo, quienes vieron una oportunidad de surguir en este campo de la economía.</p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
@@ -277,12 +275,14 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="col-lg-7">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.67923804956!2d-75.76618198571586!3d4.470583096751451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e385902e2dc40e7%3A0x9a6046b908f472b!2sRestaurante+Rancho+Eden!5e0!3m2!1ses-419!2sco!4v1478724515120" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
+        </div>
+    </div>
 </div>
 <div id="c">
     <div class="container">
         <p>
             <br/>
-            <strong>Copyright &copy; 2016</strong> Restaurante Rancho Edén S.A.S Todos los derechos reservados.
+            <strong>Copyright &copy; 2018</strong> Restaurante Rancho Edén S.A.S Todos los derechos reservados.
         </p>
 
     </div>
