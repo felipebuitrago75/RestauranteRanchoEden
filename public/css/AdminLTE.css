@@ -3166,6 +3166,15 @@ table.text-center th {
 .lockscreen-footer {
   margin-top: 10px;
 }
+#c {
+  background: #012306;
+  padding-top: 26px;
+  text-align: center;
+}
+
+#c p {
+  color: white;
+}
 /*
  * Page: Login & Register
  * ----------------------
@@ -3183,7 +3192,7 @@ table.text-center th {
 }
 .login-page,
 .register-page {
-  background: #d2d6de;
+  background:white;
 }
 .login-box,
 .register-box {
@@ -3199,10 +3208,10 @@ table.text-center th {
 }
 .login-box-body,
 .register-box-body {
-  background: #fff;
+  background: #012306;
   padding: 20px;
   border-top: 0;
-  color: #666;
+  color: white;
 }
 .login-box-body .form-control-feedback,
 .register-box-body .form-control-feedback {

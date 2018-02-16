@@ -5,10 +5,15 @@
 @endsection
 
 @section('content')
+ <div id="c">
+        <div class="container">
+
+        </div>
+    </div>
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/') }}"><b>Restaurante Rancho Edén</b></a>
+            <a href="{{ url('/') }}"><h7><strong>Restaurante Rancho Edén</strong></h7></a>
         </div><!-- /.login-logo -->
   @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -43,18 +48,28 @@
                 </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar</button>
+                <button type="submit" class="btn btn-lg btn-success">Iniciar</button>
             </div><!-- /.col -->
         </div>
     </form>
 
 
     
-    <a href="{{ url('/register') }}" class="text-center">Registrar un nuevo miembro</a>
+    <a href="{{ url('/register') }}" class="text-green">Registrar un nuevo miembro</a>
 
 </div><!-- /.login-box-body -->
 
 </div><!-- /.login-box -->
+
+<div id="c">
+        <div class="container">
+            <p>
+                <br/>
+               <strong>Copyright &copy; 2018</strong> Restaurante Rancho Edén S.A.S Todos los derechos reservados.
+            </p>
+
+        </div>
+    </div>
 
     @include('layouts.partials.scripts_auth')
 

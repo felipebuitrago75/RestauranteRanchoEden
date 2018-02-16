@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     color: #333;
 }
+h7 {
+    font-family: "Raleway";
+    font-weight: 400;
+    color: black;
+}
 
 
 /* Paragraph & Typographic */
