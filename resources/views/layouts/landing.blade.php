@@ -83,7 +83,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <div class="row centered">
             <div class="col-lg-12">
-                <h1><a href="#">Gestión de Indicadores Ambientales</a></h1>
+                <h1>Gestión de Indicadores Ambientales</h1>
                 <h3>  
                 </h3>
                 <h3><a href="{{ url('/indicadoresInicio
