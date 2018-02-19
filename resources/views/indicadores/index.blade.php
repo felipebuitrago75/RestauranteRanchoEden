@@ -8,7 +8,7 @@
           <div class="panel-body">
           Listado de indicadores
           <p>
-            <a class="btn btn-info" href="{{route('indicadores.create')}}" role="button">Crear indicador</a>
+            <a class="btn btn-lg btn-success" href="{{route('indicadores.create')}}" role="button">Crear indicador</a>
           </p>
 
           <p>hay {{$indicadores->total()}} registros</p>
@@ -30,7 +30,7 @@
                 <td>{{$indicador->descripcion}}</td>  
                 <td>{{$indicador->fecha}}</td> 
                 <td>
-              <a class="btn btn-info" href="{{URL::action('tareaControlador@show',$indicador->id_indicador)}}" role="button">Tareas</a>
+              <a class="btn btn-lg btn-success" href="{{URL::action('tareaControlador@show',$indicador->id_indicador)}}" role="button">Tareas</a>
 
                 <td>
                 <a href="{{URL::action('tareaControlador@edit',$indicador->id_indicador)}}"><img src="img/agregarTarea.png" title="Agregar tarea"></a>
@@ -49,7 +49,7 @@
             </table>
           {!! $indicadores->render() !!}
         </div>
-        <a class="btn btn-info" href="{{ URL('excel') }}" role="button"> Descargar</a>
+        <a class="btn btn-lg btn-success" href="{{ URL('excel') }}" role="button"> Descargar</a>
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         
       </div>
