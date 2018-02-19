@@ -120,7 +120,7 @@
     <div class="pull-right hidden-xs">
         <b>Version</b> 2.3.0
     </div>
-    <strong>Copyright &copy; 2016-2020 </strong>
+    <strong>Copyright &copy; 2018 - Restaurante Rancho Edén S.A.S Todos los derechos reservados. </strong>
 </footer>
 
 
