@@ -54,16 +54,17 @@
                   <li class="user-header">
                     
                     <p>
-                      Bienvenido 
+                      <strong> Bienvenido </strong>
                       <small></small>
                     </p>
+                    <img src="img/ImagenUsuario.png">
                   </li>
                   
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     
                     <div class="pull-right">
-                      <a href="{{ url('/logout') }}" class="btn btn-default btn-flat">Cerrar</a>
+                      <a href="{{ url('/logout') }}" class="btn btn-default btn-success">Cerrar</a>
                     </div>
                   </li>
                 </ul>

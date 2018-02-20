@@ -23,7 +23,7 @@
 						  </div>
 					
 						 
-						  <button type="submit" class="btn btn-default">Registrar</button>
+						  <button type="submit" class="btn btn-lg btn-success">Registrar</button>
 					</form>
 
 
