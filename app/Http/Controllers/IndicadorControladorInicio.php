@@ -9,6 +9,8 @@
 namespace App\Http\Controllers;
 use App\Indicador;
 use App\tarea;
+use App\IndicadorAgua;
+use App\tareaAgua;
 use Illuminate\Http\Request;
 
 class IndicadorControladorInicio extends Controller
