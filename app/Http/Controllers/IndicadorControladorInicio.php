@@ -26,8 +26,10 @@ class IndicadorControladorInicio extends Controller
 
         $indicadores =Indicador::paginate(5);
         $tareas=tarea::paginate();
+        $indicadoresAgua =IndicadorAgua::paginate(5);
+        $tareasAgua=tareaAgua::paginate();
 
-        return view('indicadores.inicio',compact('indicadores','tareas'));
+        return view('indicadores.inicio', compact('indicadores', 'tareas','indicadoresAgua','tareasAgua'));
 
     }
     
