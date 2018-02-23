@@ -1,16 +1,16 @@
-@extends('layouts.appInicio')
+    @extends('layouts.appInicio')
 @section('contenido2')
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-heading"> Tareas</div>
+                    <div class="panel panel-default">Tareas</div>
                     <div class="panel-body">
                         Listado de Tareas
                         <p>
 
                         </p>
-                        <p>Existen {{$tareas->total()}} registros</p>
+                        <p></p>
+
                         <table class="table table-striped">
                             <tr>
                                 <th>Id</th>
@@ -18,10 +18,10 @@
                                 <th>Progreso (%)</th>
 
                             </tr>
-                             <tr>
+                            <tr>
                                             @foreach($tareas as $tarea)
-                                                @if($indicadores->id_indicador == $tarea->indicador_id_indicador)
-                                            <td>{{$tarea->id_tarea}}</td>
+                                                @if($indicadores->id_indicadorAgua == $tarea->indicadorAgua_id_indicador)
+                                            <td>{{$tarea->id_tareaAgua}}</td>
                                             <td>{{$tarea->descripcion}}</td>
                                             <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>
 
@@ -30,7 +30,7 @@
                             @endif
                         @endforeach
                         </table>
-                        
+
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading"> Indicadores</div>
+                    <div class="panel-heading"> Indicadores Energia</div>
                     <div class="panel-body">
                         Listado de indicadores
 
@@ -18,7 +18,6 @@
                                 <th>Fecha</th>
                                 <th>Tareas</th>
 					            <th>Acciones</th>
-
 
                             </tr>
 
@@ -56,6 +55,56 @@
         </div>
     </div>
 
+<div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading"> Indicadores Agua</div>
+                    <div class="panel-body">
+                        Listado de indicadores
+
+
+                        <p>hay {{$indicadoresAgua->total()}} registros</p>
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Fecha</th>
+                                <th>Tareas</th>
+                                <th>Acciones</th>
+
+                            </tr>
+
+                            @foreach ($indicadoresAgua as $indicador)
+
+                                <tr>
+                                    <td>{{($indicador->id_indicadorAgua)}}</td>
+                                    <td>{{$indicador->nombre}}</td>
+                                    <td>{{$indicador->descripcion}}</td>
+                                    <td>{{$indicador->fecha}}</td>
+                                    <td>
+                                        <a class="btn btn-lg btn-success" href="{{URL::action('TareaAguaControladorInicio@edit',$indicador->id_indicadorAgua)}}" role="button">Tareas</a>
+                                    <td>
+
+                                        <a href="{{URL::action('ReporteAguaControlador@edit',$indicador->id_indicadorAgua)}}"><img src="img/reporteIndicador.png" title="Reporte"></a>
+
+
+                                    </td>
+
+
+                                </tr>
+                            @endforeach
+                        </table>
+                        {!! $indicadoresAgua->render() !!}
+                    </div>
+                    <a class="btn btn-lg btn-success" href="{{ URL('excel') }}" role="button"> Descargar</a>
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 @endsection

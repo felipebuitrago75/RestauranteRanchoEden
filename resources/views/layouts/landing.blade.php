@@ -23,7 +23,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <meta name="twitter:site" content="@acachawiki" />
     <meta name="twitter:creator" content="@acacha1" />
 
-    <title>Restaurante Rancho Eden S.A.S</title>
+    <title>Restaurante Rancho Edén S.A.S</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
@@ -52,7 +52,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <span class="icon-bar"></span>
             </button>
            
-         <a class="navbar-brand" href="#"><b>Restaurante Rancho Eden</b></a>
+         <a class="navbar-brand" href="#"><b>Restaurante Rancho Edén</b></a>
         </div>
 
         <div class="navbar-collapse collapse">
@@ -83,7 +83,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <div class="row centered">
             <div class="col-lg-12">
-                <h1>Gestión de Indicadores Ambientales</h1>
+                <h1>Gestión de Indicadores de Responsabilidad Ambientales</h1>
                 <h3>  
                 </h3>
                 <h3><a href="{{ url('/indicadoresInicio') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
@@ -129,7 +129,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <div class="col-lg-4">
                 <img src="{{ asset('/img/intro03.png') }}" alt="">
                 <h3>{{ trans('adminlte_lang::message.monitoring') }}</h3>
-                <p>Control de los aspectos técnicos referentes a los indicadores de responsabilidad ambientales de la empresa Rancho Edén S.A.S </p>
+                <p>Control de los aspectos técnicos referente a los indicadores de responsabilidad ambiental de la empresa Rancho Edén S.A.S </p>
             </div>
         </div>
         <br>
@@ -190,7 +190,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         </div>
                         <div id="collapseThree" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>El Restaurante se consolidó como uno de los mejores en la región caracterizado por su exceltente servicio y buena sazón. Ademas el Restaurante Rancho Edén cuenta con la infraestructura tecnologica mas estable y poderosa de la región, Software de facturación y comandas, intranet. En cuanto a la parte gastronomica el Restaurante Rancho Edén ha sido merecedor del premio al mejor plato tipico representativo de la región otorgado por el concurso "La Ruta del Sabor" con el plato llamado Cazuela Cuyabra.</p>
+                                <p>El Restaurante se consolidó como uno de los mejores en la región caracterizado por su exceltente servicio y buena sazón. Ademas el Restaurante Rancho Edén cuenta con una de las infraestructuras tecnologicas mas estable  de la región, Software de facturación y comandas, intranet. En cuanto a la parte gastronomica el Restaurante Rancho Edén ha sido merecedor del premio al mejor plato tipico representativo de la región otorgado por el concurso "La Ruta del Sabor" con el plato llamado Cazuela Cuyabra.</p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
@@ -204,7 +204,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         </div>
                         <div id="collapseFour" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>Actualmente el Restaurante Rancho Edén cuenta con diferentes servicios para satisfacer todas las necesidades de sus clientes. Servicio de hospedaje, servicio de mercado y panadería, zona de juegos para niños. Actualmente cuenta com mas de 70 empleados entre las diferentes secciones haciendo de este una empresa comprometida con la región y su progreso..   </p>
+                                <p>Actualmente el Restaurante Rancho Edén cuenta con diferentes servicios para satisfacer todas las necesidades de sus clientes. Servicio de hospedaje, servicio de mercado y panadería, zona de juegos para niños. Actualmente cuenta com mas de 70 empleados entre las diferentes secciones haciendo de este una empresa comprometida con la región y su progreso.  </p>
                             </div><!-- /accordion-inner -->
                         </div><!-- /collapse -->
                     </div><!-- /accordion-group -->
