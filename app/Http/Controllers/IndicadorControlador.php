@@ -10,8 +10,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Indicador;
 use App\IndicadorAgua;
+use App\IndicadorAire;
 use App\tareaAgua;
 use App\tarea;
+use App\tareaAire;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\IndicadorFormRequest;
 use DB ;
@@ -45,7 +47,10 @@ class IndicadorControlador extends Controller
         $indicadoresAgua =IndicadorAgua::paginate(5);
         $tareasAgua=tareaAgua::paginate();
 
-        return view('indicadores.index',compact('indicadores','tareas','indicadoresAgua','tareasAgua'));
+        $indicadoresAire = IndicadorAire::paginate(5);
+        $tareasAire = tareaAire::paginate();
+
+        return view('indicadores.index',compact('indicadores','tareas','indicadoresAgua','tareasAgua','indicadoresAire','tareasAire'));
     }
 
     /**

@@ -11,6 +11,8 @@ use App\Indicador;
 use App\tarea;
 use App\IndicadorAgua;
 use App\tareaAgua;
+use App\IndicadorAire;
+use App\tareaAire;
 use Illuminate\Http\Request;
 
 class IndicadorControladorInicio extends Controller
