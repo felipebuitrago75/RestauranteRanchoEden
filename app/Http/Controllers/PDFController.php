@@ -31,7 +31,7 @@ class PDFController extends Controller
 
 		$export= Indicador::select('id_indicador','fecha', 'nombre','usuario_idUsuario','descripcion')->get();
 		
-		Excel::create('Reporte ', function($excel) use($export) {
+		Excel::create('Reporte.Indicadores.Energia', function($excel) use($export) {
 
 		    $excel->sheet('Indicadores', function($sheet) use ($export) {
 

@@ -31,7 +31,7 @@ class PDFControllerAgua extends Controller
 
 		$export= IndicadorAgua::select('id_indicadorAgua','fecha', 'nombre','usuario_idUsuario','descripcion')->get();
 		
-		Excel::create('Reporte Indicadores ', function($excel) use($export) {
+		Excel::create('Reporte.Indicadores.Agua', function($excel) use($export) {
 
 		    $excel->sheet('Indicadores', function($sheet) use ($export) {
 

@@ -115,7 +115,7 @@
                         Listado de indicadores
 
 
-                        <p>hay {{$indicadoresAire->total()}} registros</p>
+                        <p>Existen {{$indicadoresAire->total()}} registros</p>
                         <table class="table table-striped">
                             <tr>
                                 <th>Id</th>
