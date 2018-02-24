@@ -6,7 +6,9 @@
 
 namespace App\Http\Controllers;
 
+use App\IndicadorAire;
 use App\tareaAgua;
+use App\tareaAire;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Indicador;
@@ -22,7 +24,7 @@ use Carbon\Carbon;
  * Class IndicadorControlador
  * @package App\Http\Controllers
  */
-class IndicadorControladorAgua extends Controller
+class IndicadorControladorAire extends Controller
 {
     /**
      * Crea una nueva instancia de controlador.
@@ -39,10 +41,10 @@ class IndicadorControladorAgua extends Controller
      */
     public function index(Request $request){
     	
-    	$indicadoresAgua =IndicadorAgua::paginate(5);
-        $tareasAgua=tareaAgua::paginate();
+    	$indicadoresAire =IndicadorAire::paginate(5);
+        $tareasAire=tareaAire::paginate();
 
-    	return view('indicadores.index',compact('indicadoresAgua','tareasAgua'));
+    	return view('indicadores.index',compact('indicadoresAire','tareasAire'));
     	
     }
 
@@ -52,7 +54,7 @@ class IndicadorControladorAgua extends Controller
      */
     public function create(){
 
-    	return view("indicadores.createAgua");
+    	return view("indicadores.createAire");
     	
     }
     /**
@@ -62,12 +64,12 @@ class IndicadorControladorAgua extends Controller
      */
     public function store(Request $request){
 
-    	$indicadorAgua = new IndicadorAgua($request->all());
-    	$indicadorAgua->fecha=Carbon::now();
-    	$indicadorAgua->nombre=$request->get('nombre');
-        $indicadorAgua->usuario_idUsuario=Auth::user()->id;
-    	$indicadorAgua->descripcion=$request->get('descripcion');
-    	$indicadorAgua->save();
+    	$indicadorAire = new IndicadorAire($request->all());
+    	$indicadorAire->fecha=Carbon::now();
+    	$indicadorAire->nombre=$request->get('nombre');
+        $indicadorAire->usuario_idUsuario=Auth::user()->id;
+    	$indicadorAire->descripcion=$request->get('descripcion');
+    	$indicadorAire->save();
         
         return Redirect::to('indicadores');
 
@@ -87,7 +89,7 @@ class IndicadorControladorAgua extends Controller
      * @return  view indicadores.edit retorna la vista para editar los indicadores.
      */
     public function edit($id){
-    	return view("indicadores.editAgua",["indicador"=>IndicadorAgua::findOrFail($id)]);
+    	return view("indicadores.editAire",["indicador"=>IndicadorAire::findOrFail($id)]);
     	
     }
     /**
@@ -97,12 +99,12 @@ class IndicadorControladorAgua extends Controller
      */
 
   public function update(Request $request,$id){
-        $indicadorAgua =IndicadorAgua::findOrFail($id);
-        $indicadorAgua->fecha=Carbon::now();
-         $indicadorAgua->nombre=$request->get('nombre');
-         $indicadorAgua->descripcion=$request->get('descripcion');
-        $indicadorAgua->usuario_idUsuario=Auth::user()->id;
-        $indicadorAgua->update();
+        $indicadorAire =IndicadorAire::findOrFail($id);
+        $indicadorAire->fecha=Carbon::now();
+         $indicadorAire->nombre=$request->get('nombre');
+         $indicadorAire->descripcion=$request->get('descripcion');
+        $indicadorAire->usuario_idUsuario=Auth::user()->id;
+        $indicadorAire->update();
         return Redirect::to('indicadores');
 
 

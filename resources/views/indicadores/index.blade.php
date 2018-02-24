@@ -11,7 +11,7 @@
             <a class="btn btn-lg btn-success" href="{{route('indicadores.create')}}" role="button">Crear indicador</a>
           </p>
 
-          <p>hay {{$indicadores->total()}} registros</p>
+          <p>Existen {{$indicadores->total()}} registros</p>
             <table class="table table-striped">
               <tr>
                 <th>Id</th>
@@ -69,7 +69,7 @@
             <a class="btn btn-lg btn-success" href="{{route('indicadoresAgua.create')}}" role="button">Crear indicador</a>
           </p>
 
-          <p>hay {{$indicadoresAgua->total()}} registros</p>
+          <p>Existen {{$indicadoresAgua->total()}} registros</p>
           <table class="table table-striped">
             <tr>
               <th>Id</th>
@@ -107,6 +107,63 @@
           {!! $indicadores->render() !!}
         </div>
         <a class="btn btn-lg btn-success" href="{{ URL('excelAgua') }}" role="button"> Descargar</a>
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading"> Indicadores Aire</div>
+        <div class="panel-body">
+          Listado de indicadores
+          <p>
+            <a class="btn btn-lg btn-success" href="{{route('indicadoresAire.create')}}" role="button">Crear indicador</a>
+          </p>
+
+          <p>hay {{$indicadoresAire->total()}} registros</p>
+          <table class="table table-striped">
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Fecha</th>
+              <th>Tareas</th>
+              <th>Acciones</th>
+            </tr>
+
+            @foreach ($indicadoresAire as $indicadorAire)
+
+              <tr>
+                <td>{{($indicadorAire->id_indicadorAire)}}</td>
+                <td>{{$indicadorAire->nombre}}</td>
+                <td>{{$indicadorAire->descripcion}}</td>
+                <td>{{$indicadorAire->fecha}}</td>
+                <td>
+                  <a class="btn btn-lg btn-success" href="{{URL::action('tareaAireControlador@show',$indicadorAire->id_indicadorAire)}}" role="button">Tareas</a>
+
+                <td>
+                  <a href="{{URL::action('tareaAireControlador@edit',$indicadorAire->id_indicadorAire)}}"><img src="img/agregarTarea.png" title="Agregar tarea"></a>
+                  <a href="{{URL::action('IndicadorControladorAire@edit',$indicadorAire->id_indicadorAire)}}"><img src="img/logoEditarIndicador.png" title="Editar indicador"></a>
+                  <a href="{{URL::action('ReporteAireControlador@edit',$indicadorAire->id_indicadorAire)}}"><img src="img/reporteIndicador.png" title="Reporte"></a>
+
+
+                </td>
+
+
+
+
+              </tr>
+            @endforeach
+          </table>
+          {!! $indicadores->render() !!}
+        </div>
+        <a class="btn btn-lg btn-success" href="{{ URL('excelAire') }}" role="button"> Descargar</a>
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
       </div>

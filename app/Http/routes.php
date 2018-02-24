@@ -36,16 +36,23 @@ Route::resource('indicadores','IndicadorControlador');
 Route::resource('indicadoresInicio','IndicadorControladorInicio');
 Route::resource('indicadoresAgua', 'IndicadorControladorAgua');
 Route::resource('indicadoresAguaInicio', 'IndicadorControladorAguaInicio');
+Route::resource('indicadoresAire', 'IndicadorControladorAire');
+Route::resource('indicadoresAireInicio', 'IndicadorControladorAireInicio');
+
 
 //Tareas
 Route::resource('tareas','tareaControlador');
 Route::resource('tareaInicio','TareaControladorInicio');
 Route::resource('tareaAgua','tareaAguaControlador');
 Route::resource('tareaAguaInicio','TareaAguaControladorInicio');
+Route::resource('tareaAire','tareaAireControlador');
+Route::resource('tareaAireInicio','TareaAireControladorInicio');
 
 //Reportes
 Route::resource('reporte','ReporteControlador');
 Route::resource('reporteInicio','ReporteControladorInicio');
 Route::resource('reporteAgua','ReporteAguaControlador');
+Route::resource('reporteAire','ReporteAireControlador');
 Route::resource('excel','PDFController');
 Route::resource('excelAgua','PDFControllerAgua');
+Route::resource('excelAire','PDFControllerAire');
