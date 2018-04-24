@@ -1,15 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: CESAR VARGAS
- * Date: 24/04/2018
- * Time: 6:23 PM
- */
+
 
 namespace App\Http\Controllers;
 use App\tareaAgua;
 use Illuminate\Http\Request;
 use App\tarea;
+use App\tareaAire;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
