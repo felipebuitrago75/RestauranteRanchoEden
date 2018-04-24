@@ -25,7 +25,7 @@
                 <td>{{$tarea->id_tareaAire}}</td>
                 <td>{{$tarea->descripcion}}</td>
                 <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>
-
+                <td> <a href="{{URL::action('tareaAireControladorEditar@edit',$tarea->id_tareaAire)}}">Editar Tarea</a></td>
 
               </tr>
                 @endif

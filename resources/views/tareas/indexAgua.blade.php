@@ -25,7 +25,7 @@
                 <td>{{$tarea->id_tareaAgua}}</td>
                 <td>{{$tarea->descripcion}}</td>
                 <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>
-
+                <td> <a href="{{URL::action('tareaAguaControladorEditar@edit',$tarea->id_tareaAgua)}}">Editar Tarea</a></td>
 
               </tr>
                 @endif

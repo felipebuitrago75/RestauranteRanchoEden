@@ -7,10 +7,10 @@
                     <div class="panel-heading">  <br> </div>
                     <div class="panel-body">
 
-                        {!! Form::model($tareas,['route' => ['tareas.update',$tareas ],'method' =>'PUT']) !!}
+                        {!! Form::model($tareas,['route' => ['tareaAire.update',$tareas ],'method' =>'PUT']) !!}
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
-                            {!! Form::label('descripcion','Nombre de la tarea')!!}
+                            {!! Form::label('descripcion','Nombre de la tareas')!!}
                             {!! Form::text('descripcion',null,['class'=> 'form-control'])!!}
 
                         </div>
