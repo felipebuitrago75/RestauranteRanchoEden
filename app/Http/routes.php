@@ -47,6 +47,7 @@ Route::resource('tareaAgua','tareaAguaControlador');
 Route::resource('tareaAguaInicio','TareaAguaControladorInicio');
 Route::resource('tareaAire','tareaAireControlador');
 Route::resource('tareaAireInicio','TareaAireControladorInicio');
+Route::resource('tareaEditar','tareaControladorEditar');
 
 //Reportes
 Route::resource('reporte','ReporteControlador');

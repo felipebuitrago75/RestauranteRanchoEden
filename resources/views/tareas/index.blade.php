@@ -27,7 +27,7 @@
                 <td>{{$tarea->id_tarea}}</td>                 
                 <td>{{$tarea->descripcion}}</td>  
                  <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>  
-                 <td></td>
+                 <td> <a href="{{URL::action('tareaControladorEditar@edit',$tarea->id_tarea)}}"><img src="img/logoEditarTarea.png" title="Editar Tarea"></a></td>
 
 
               </tr>
