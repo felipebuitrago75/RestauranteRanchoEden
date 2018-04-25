@@ -32,6 +32,7 @@
                 @endforeach
 
             </table>
+            {!! $tareasAire->render() !!}
         </div>
         
       </div>

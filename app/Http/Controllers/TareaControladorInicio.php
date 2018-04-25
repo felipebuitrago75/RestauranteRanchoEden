@@ -44,7 +44,7 @@ class TareaControladorInicio extends Controller
      */
     public function edit($id){
         $indicadores = Indicador::find($id);
-        $tareas = tarea::paginate();
+        $tareas = tarea::paginate(15);
         return view("tareas.inicio",compact('indicadores','tareas'));
     }
 

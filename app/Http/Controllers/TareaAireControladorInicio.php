@@ -46,7 +46,7 @@ class TareaAireControladorInicio extends Controller
      */
     public function edit($id){
         $indicadores = IndicadorAire::find($id);
-        $tareas = tareaAire::paginate();
+        $tareas = tareaAire::paginate(15);
         return view("tareas.inicioAire",compact('indicadores','tareas'));
     }
 }

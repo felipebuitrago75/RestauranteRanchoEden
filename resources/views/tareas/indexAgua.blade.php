@@ -32,6 +32,7 @@
                 @endforeach
 
             </table>
+            {!! $tareasAgua->render() !!}
         </div>
         
       </div>

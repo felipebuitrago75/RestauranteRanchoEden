@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
-        <div class="panel-heading"> Indicadores Energia</div>
+        <div class="panel-heading"> Indicadores de Residuo</div>
           <div class="panel-body">
           Listado de indicadores
           <p>
@@ -62,7 +62,7 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
-        <div class="panel-heading"> Indicadores Agua</div>
+        <div class="panel-heading"> Indicadores de Agua</div>
         <div class="panel-body">
           Listado de indicadores
           <p>
@@ -119,7 +119,7 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
-        <div class="panel-heading"> Indicadores Aire</div>
+        <div class="panel-heading"> Indicadores de Energía</div>
         <div class="panel-body">
           Listado de indicadores
           <p>

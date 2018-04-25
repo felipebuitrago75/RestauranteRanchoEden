@@ -30,6 +30,7 @@
                             @endif
                         @endforeach
                         </table>
+                        {!! $tareas->render() !!}
                         
                     </div>
                 </div>

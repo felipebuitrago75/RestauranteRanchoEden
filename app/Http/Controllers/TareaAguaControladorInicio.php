@@ -44,7 +44,7 @@ class TareaAguaControladorInicio extends Controller
      */
     public function edit($id){
         $indicadores = IndicadorAgua::find($id);
-        $tareas = tareaAgua::paginate();
+        $tareas = tareaAgua::paginate(15);
         return view("tareas.inicioAgua",compact('indicadores','tareas'));
     }
 }
