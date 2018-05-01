@@ -32,7 +32,7 @@
                 @endforeach
 
             </table>
-            {!! $tareas->render() !!}
+            {!! $tareasAgua->render() !!}
         </div>
         
       </div>
