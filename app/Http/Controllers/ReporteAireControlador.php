@@ -45,7 +45,7 @@ class ReporteAireControlador extends Controller
     }
     public function index(){
 
-        $tareas=tarea::select('descripcion','estado')->get();
+        $tareas=tareaAire::select('descripcion','estado')->get();
         Excel::create('Reporte ', function($excel) use($tareas) {
 
             $excel->sheet('Indicadores', function($sheet) use ($tareas) {

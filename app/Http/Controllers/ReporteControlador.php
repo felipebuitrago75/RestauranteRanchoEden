@@ -38,9 +38,19 @@ class ReporteControlador extends Controller
         return view('reporte.editInicio',compact('indicador','tareas'));
         
     }
-    public function generarGrafica(){
+    public function index(){
 
-        $tareas=tarea::select('descripcion','estado');
+        $tareas=tarea::select('descripcion','estado')->get();
+        Excel::create('Reporte ', function($excel) use($tareas) {
+
+            $excel->sheet('Indicadores', function($sheet) use ($tareas) {
+
+                $sheet->fromArray($tareas);
+
+            });
+
+
+        })->export('xls');
         
     }
 }

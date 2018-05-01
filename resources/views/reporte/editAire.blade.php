@@ -167,7 +167,7 @@
 				</div>
 				{!! Form::close() !!}
 
-				<a class="btn btn-info" href="{{ URL('reporteAgua') }}" role="button"> Descargar</a>
+				<a class="btn btn-info" href="{{ URL('reporteAire') }}" role="button"> Descargar</a>
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			</div>
 

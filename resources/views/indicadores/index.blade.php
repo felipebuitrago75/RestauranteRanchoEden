@@ -27,7 +27,7 @@
               <tr>
                 <td>{{($indicador->id_indicador)}}</td> 
                 <td>{{$indicador->nombre}}</td> 
-                <td>{{$indicador->descripcion}}</td>  
+                <td><img src="img/documento.jpg" title="Descripción"></td>  
                 <td>{{$indicador->fecha}}</td> 
                 <td>
               <a class="btn btn-lg btn-success" href="{{URL::action('tareaControlador@show',$indicador->id_indicador)}}" role="button">Tareas</a>
@@ -85,7 +85,7 @@
               <tr>
                 <td>{{($indicadorAgua->id_indicadorAgua)}}</td>
                 <td>{{$indicadorAgua->nombre}}</td>
-                <td>{{$indicadorAgua->descripcion}}</td>
+                <td><img src="img/documento.jpg" title="Descripción"></td>
                 <td>{{$indicadorAgua->fecha}}</td>
                 <td>
                   <a class="btn btn-lg btn-success" href="{{URL::action('tareaAguaControlador@show',$indicadorAgua->id_indicadorAgua)}}" role="button">Tareas</a>
@@ -142,7 +142,7 @@
               <tr>
                 <td>{{($indicadorAire->id_indicadorAire)}}</td>
                 <td>{{$indicadorAire->nombre}}</td>
-                <td>{{$indicadorAire->descripcion}}</td>
+                <td><img src="img/documento.jpg" title="Descripción"></td>
                 <td>{{$indicadorAire->fecha}}</td>
                 <td>
                   <a class="btn btn-lg btn-success" href="{{URL::action('tareaAireControlador@show',$indicadorAire->id_indicadorAire)}}" role="button">Tareas</a>
