@@ -14,6 +14,7 @@ use App\Http\Controllers\Controller;
 use DB ;
 use Auth;
 use App\tarea;
+use Excel;
 use Carbon\Carbon;
 
 class ReporteControlador extends Controller
