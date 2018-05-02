@@ -59,3 +59,7 @@ Route::resource('reporteAire','ReporteAireControlador');
 Route::resource('excel','PDFController');
 Route::resource('excelAgua','PDFControllerAgua');
 Route::resource('excelAire','PDFControllerAire');
+
+
+//PDF
+Route::resource('reporte_pdf', 'PDFdocumentoController');
