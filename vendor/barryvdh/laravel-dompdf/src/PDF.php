@@ -2,10 +2,9 @@
 namespace Barryvdh\DomPDF;
 
 use Dompdf\Dompdf;
-use Dompdf\Options;
 use Exception;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Contracts\View\Factory as ViewFactory;
+use Illuminate\View\Factory as ViewFactory;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Http\Response;
 
@@ -39,7 +38,7 @@ class PDF{
      * @param Dompdf $dompdf
      * @param \Illuminate\Contracts\Config\Repository $config
      * @param \Illuminate\Filesystem\Filesystem $files
-     * @param \Illuminate\Contracts\View\Factory $view
+     * @param \Illuminate\View\Factory $view
      */
     public function __construct(Dompdf $dompdf, ConfigRepository $config, Filesystem $files, ViewFactory $view){
         $this->dompdf = $dompdf;
@@ -125,18 +124,6 @@ class PDF{
     }
 
     /**
-     * Set/Change an option in DomPdf
-     *
-     * @param array $options
-     * @return static
-     */
-    public function setOptions(array $options) {
-        $options = new Options($options);
-        $this->dompdf->setOptions($options);
-        return $this;
-    }
-
-    /**
      * Output the PDF as a string.
      *
      * @return string The rendered PDF as string
@@ -201,7 +188,7 @@ class PDF{
 
         if ( $this->showWarnings ) {
             global $_dompdf_warnings;
-            if(!empty($_dompdf_warnings) && count($_dompdf_warnings)){
+            if(count($_dompdf_warnings)){
                 $warnings = '';
                 foreach ($_dompdf_warnings as $msg){
                     $warnings .= $msg . "\n";

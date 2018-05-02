@@ -27,7 +27,11 @@
               <tr>
                 <td>{{($indicador->id_indicador)}}</td> 
                 <td>{{$indicador->nombre}}</td> 
+<<<<<<< HEAD
                 <td><a href="{{URL::action('PDFdocumentoController@edit',$indicador->id_indicador)}}"><img src="img/documento.jpg" title="Descripcióoon"></a></td>
+=======
+                <td><img src="img/documento.jpg" title="Descripción"></td>  
+>>>>>>> parent of 95acf99... PDF documento
                 <td>{{$indicador->fecha}}</td> 
                 <td>
               <a class="btn btn-lg btn-success" href="{{URL::action('tareaControlador@show',$indicador->id_indicador)}}" role="button">Tareas</a>

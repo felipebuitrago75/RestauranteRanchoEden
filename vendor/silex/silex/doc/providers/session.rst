@@ -1,5 +1,5 @@
-Session
-=======
+SessionServiceProvider
+======================
 
 The *SessionServiceProvider* provides a service for storing data persistently
 between requests.
