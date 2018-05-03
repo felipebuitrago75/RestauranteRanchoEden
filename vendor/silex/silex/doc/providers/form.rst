@@ -1,5 +1,5 @@
-Form
-====
+FormServiceProvider
+===================
 
 The *FormServiceProvider* provides a service for building forms in
 your application with the Symfony Form component.
@@ -73,7 +73,7 @@ Registering
 
     .. code-block:: bash
 
-        composer require symfony/twig-bridge symfony/config symfony/translation
+        composer require symfony/twig-bridge symfony/translation
 
 Usage
 -----

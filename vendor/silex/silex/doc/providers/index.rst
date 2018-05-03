@@ -1,15 +1,16 @@
-Built-in Service Providers
-==========================
+Silex
+=====
 
 .. toctree::
     :maxdepth: 1
 
-    twig
-    url_generator
+    doctrine
     monolog
     session
     swiftmailer
     translation
+    twig
+    url_generator
     validator
     form
     http_cache
@@ -18,4 +19,3 @@ Built-in Service Providers
     remember_me
     serializer
     service_controller
-    doctrine

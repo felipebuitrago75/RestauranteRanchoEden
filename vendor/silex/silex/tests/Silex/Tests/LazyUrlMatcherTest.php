@@ -26,7 +26,7 @@ class LazyUrlMatcherTest extends \PHPUnit_Framework_TestCase
     public function testUserMatcherIsCreatedLazily()
     {
         $callCounter = 0;
-        $urlMatcher = $this->getMockBuilder('Symfony\Component\Routing\Matcher\UrlMatcherInterface')->getMock();
+        $urlMatcher = $this->getMock('Symfony\Component\Routing\Matcher\UrlMatcherInterface');
 
         $matcher = new LazyUrlMatcher(function () use ($urlMatcher, &$callCounter) {
             ++$callCounter;
@@ -57,7 +57,7 @@ class LazyUrlMatcherTest extends \PHPUnit_Framework_TestCase
      */
     public function testMatchIsProxy()
     {
-        $urlMatcher = $this->getMockBuilder('Symfony\Component\Routing\Matcher\UrlMatcherInterface')->getMock();
+        $urlMatcher = $this->getMock('Symfony\Component\Routing\Matcher\UrlMatcherInterface');
         $urlMatcher->expects($this->once())
             ->method('match')
             ->with('path')
@@ -76,8 +76,8 @@ class LazyUrlMatcherTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetContextIsProxy()
     {
-        $context = $this->getMockBuilder('Symfony\Component\Routing\RequestContext')->getMock();
-        $urlMatcher = $this->getMockBuilder('Symfony\Component\Routing\Matcher\UrlMatcherInterface')->getMock();
+        $context = $this->getMock('Symfony\Component\Routing\RequestContext');
+        $urlMatcher = $this->getMock('Symfony\Component\Routing\Matcher\UrlMatcherInterface');
         $urlMatcher->expects($this->once())
             ->method('setContext')
             ->with($context);
@@ -93,8 +93,8 @@ class LazyUrlMatcherTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetContextIsProxy()
     {
-        $context = $this->getMockBuilder('Symfony\Component\Routing\RequestContext')->getMock();
-        $urlMatcher = $this->getMockBuilder('Symfony\Component\Routing\Matcher\UrlMatcherInterface')->getMock();
+        $context = $this->getMock('Symfony\Component\Routing\RequestContext');
+        $urlMatcher = $this->getMock('Symfony\Component\Routing\Matcher\UrlMatcherInterface');
         $urlMatcher->expects($this->once())
             ->method('getContext')
             ->will($this->returnValue($context));
