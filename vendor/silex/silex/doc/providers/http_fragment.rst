@@ -1,5 +1,5 @@
-HTTP Fragment
-=============
+HttpFragmentServiceProvider
+===========================
 
 The *HttpFragmentServiceProvider* provides support for the Symfony fragment
 sub-framework, which allows you to embed fragments of HTML in a template.
