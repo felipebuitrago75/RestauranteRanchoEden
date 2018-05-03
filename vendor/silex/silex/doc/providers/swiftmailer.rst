@@ -1,5 +1,5 @@
-Swiftmailer
-===========
+SwiftmailerServiceProvider
+==========================
 
 The *SwiftmailerServiceProvider* provides a service for sending email through
 the `Swift Mailer <http://swiftmailer.org>`_ library.

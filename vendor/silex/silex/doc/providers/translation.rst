@@ -1,5 +1,5 @@
-Translation
-===========
+TranslationServiceProvider
+==========================
 
 The *TranslationServiceProvider* provides a service for translating your
 application into different languages.

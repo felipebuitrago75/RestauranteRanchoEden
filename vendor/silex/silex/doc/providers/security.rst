@@ -1,5 +1,5 @@
-Security
-========
+SecurityServiceProvider
+=======================
 
 The *SecurityServiceProvider* manages authentication and authorization for
 your applications.

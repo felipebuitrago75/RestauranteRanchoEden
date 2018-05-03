@@ -14,7 +14,6 @@ following ``.htaccess`` file:
 
         RewriteEngine On
         #RewriteBase /path/to/app
-        RewriteCond %{REQUEST_FILENAME} !-d
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteRule ^ index.php [QSA,L]
     </IfModule>
@@ -30,7 +29,7 @@ Alternatively, if you use Apache 2.2.16 or higher, you can use the
 
 .. code-block:: apache
 
-    FallbackResource index.php
+    FallbackResource /index.php
 
 .. note::
 
@@ -57,7 +56,7 @@ The **minimum configuration** to get your application running under Nginx is:
         # location ~ ^/(index|index_dev)\.php(/|$) {
         location ~ ^/index\.php(/|$) {
             # the ubuntu default
-            fastcgi_pass   unix:/var/run/php/phpX.X-fpm.sock;
+            fastcgi_pass   unix:/var/run/php5-fpm.sock;
             # for running on centos
             #fastcgi_pass   unix:/var/run/php-fpm/www.sock;
     
