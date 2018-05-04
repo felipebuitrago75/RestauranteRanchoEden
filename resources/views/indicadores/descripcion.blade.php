@@ -12,12 +12,12 @@
         .box {
             position: relative;
             border-radius: 3px;
-            background: #ffffff;
-            border-top: 3px solid #d2d6de;
+            background: green;
+            border-top: 3px solid #F1EAE6;
             margin-bottom: 20px;
             width: 100%;
             box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-            background-color: #ECF0F5;
+            background-color: #F1EAE6;
         }
 
         .box-header {
@@ -28,7 +28,7 @@
         }
 
         .box-header.with-border {
-            border-bottom: 1px solid #f4f4f4;
+            border-bottom: 1px solid #F1EAE6;
         }
 
 
@@ -61,7 +61,7 @@
 
 
         .table-bordered {
-            border: 1px solid #f4f4f4;
+            border: 1px solid #9F7C69;
         }
 
 
@@ -106,15 +106,18 @@
 <body>
 
 <div class="col-md-12">
-    <div class="box">
-        <div class="box-header with-border">
-            <h3 class="box-title">Nombre del Indicador <?=  $indicadores->nombre; ?></h3>
-        </div><!-- /.box-header -->
+
+    <img src="img/encabezado.png">
+        <div style="position: absolute; top: 1px; left: 230px"></div>
+        <h3 class="box-title"><font style="text-transform: uppercase;"><?=  $indicadores->nombre; ?></font></h3>
+        <div class="box">
+
+        <div class="box-header with-border"></div><!-- /.box-header -->
         <div class="box-body">
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th style="width: 40px">ID</th>
+
                     <th>Descripción</th>
                 </tr>
                 </thead>
@@ -123,7 +126,7 @@
                 @foreach($data as $indicador)
                 @if($indicadores->id_indicador == $indicador->id_indicador)
                 <tr>
-                    <td style="width: 10px" ><?= $indicador->id_indicador; ?></td>
+
                     <td><?= $indicador->descripcion; ?></td>
 
                 </tr>
@@ -136,33 +139,48 @@
 
             </table>
         </div><!-- /.box-body -->
-        <div class="box-footer clearfix">
-
-        </div>
     </div><!-- /.box -->
 
 
-</div>
+        <div class="box">
+
+        <div class="box-header with-border"></div><!-- /.box-header -->
+        <div class="box-body">
+
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+
+                    <th>Tareas</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                @foreach($tarea as $tareas)
+                    @if($indicadores->id_indicador == $tareas->indicador_id_indicador)
+                        <tr>
+
+                    <td><?= $tareas->descripcion; ?></td>
+
+                </tr>
+                    @endif
+                @endforeach
 
 
 
+                </tbody>
+
+            </table>
+        </div><!-- /.box-body -->
+    </div><!-- /.box -->
+    </div>
+
+    <div style="position: absolute; top: 950px">
+        <div class="box-footer">
+            <div style="text-align: center"><strong>Copyright &copy; 2018</strong> Restaurante Rancho Edén S.A.S Todos los derechos reservados.</div>
+        </div>
+    </div>
 </body>
+
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
