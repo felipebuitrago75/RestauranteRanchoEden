@@ -15,7 +15,7 @@
                                 <th>Id</th>
                                 <th>Nombre</th>
                                 <th>Descripción</th>
-                                <th>Fecha</th>
+                                <th>Progreso</th>
                                 <th>Tareas</th>
 					            <th>Acciones</th>
 
@@ -26,8 +26,15 @@
                                 <tr>
                                     <td>{{($indicador->id_indicador)}}</td>
                                     <td>{{$indicador->nombre}}</td>
-                                    <td>{{$indicador->descripcion}}</td>
-                                    <td>{{$indicador->fecha}}</td>
+                                    <td><a href="{{URL::action('PDFdocumentoController@edit',$indicador->id_indicador)}}"><img src="img/documento.jpg" title="Descripción"></a></td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{$res}}" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                {{$res}}
+                                            </div>
+                                        </div>
+
+                                    </td>
                                     <td>
                                         <a class="btn btn-lg btn-success" href="{{URL::action('TareaControladorInicio@edit',$indicador->id_indicador)}}" role="button">Tareas</a>
 
@@ -81,7 +88,7 @@
                                 <tr>
                                     <td>{{($indicador->id_indicadorAgua)}}</td>
                                     <td>{{$indicador->nombre}}</td>
-                                    <td>{{$indicador->descripcion}}</td>
+                                    <td><a href="{{URL::action('PDFdocumentoAguaController@edit',$indicador->id_indicadorAgua)}}"><img src="img/documento.jpg" title="Descripción"></a></td>
                                     <td>{{$indicador->fecha}}</td>
                                     <td>
                                         <a class="btn btn-lg btn-success" href="{{URL::action('TareaAguaControladorInicio@edit',$indicador->id_indicadorAgua)}}" role="button">Tareas</a>
@@ -132,7 +139,7 @@
                                 <tr>
                                     <td>{{($indicador->id_indicadorAire)}}</td>
                                     <td>{{$indicador->nombre}}</td>
-                                    <td>{{$indicador->descripcion}}</td>
+                                    <td><a href="{{URL::action('PDFdocumentoAireController@edit',$indicador->id_indicadorAire)}}"><img src="img/documento.jpg" title="Descripción"></a></td>
                                     <td>{{$indicador->fecha}}</td>
                                     <td>
                                         <a class="btn btn-lg btn-success" href="{{URL::action('TareaAireControladorInicio@edit',$indicador->id_indicadorAire)}}" role="button">Tareas</a>

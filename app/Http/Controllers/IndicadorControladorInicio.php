@@ -35,8 +35,13 @@ class IndicadorControladorInicio extends Controller
         $indicadoresAire = IndicadorAire::paginate(5);
         $tareasAire = tareaAire::paginate();
 
-        return view('indicadores.inicio', compact('indicadores', 'tareas','indicadoresAgua','tareasAgua','indicadoresAire','tareasAire'));
-
+       $res= 0;
+        foreach ($tareas as $tarea)
+            foreach ($indicadores as $indicador)
+                if (!$indicador->id_indicador == $tarea->indicadores_id_indicadores)
+                $res+= ($tarea->estado)/($tarea->count());
+                return view('indicadores.inicio', compact('indicadores', 'res', 'tareas','indicadoresAgua','tareasAgua','indicadoresAire','tareasAire'));
+    
     }
     
 }
