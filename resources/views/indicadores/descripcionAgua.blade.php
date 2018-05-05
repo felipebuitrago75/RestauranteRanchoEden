@@ -112,9 +112,9 @@
     <h3 class="box-title"><font style="text-transform: uppercase;"><?=  $indicadores->nombre; ?></font></h3>
     <div class="box">
 
-        <div class="box-header with-border"></div><!-- /.box-header -->
+        
         <div class="box-body">
-            <table class="table table-bordered">
+            <table class="table">
                 <thead>
                 <tr>
 
