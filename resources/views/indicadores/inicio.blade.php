@@ -29,8 +29,8 @@
                                     <td><a href="{{URL::action('PDFdocumentoController@edit',$indicador->id_indicador)}}"><img src="img/documento.jpg" title="Descripción"></a></td>
                                     <td>
                                         <div class="progress">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{$res}}" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                                {{$res}}
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{$total}}" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                {{$total}}
                                             </div>
                                         </div>
 
