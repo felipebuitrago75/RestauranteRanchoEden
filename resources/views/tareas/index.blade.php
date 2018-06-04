@@ -10,7 +10,6 @@
           <p>
             
           </p>
-          <p></p>
           <p>hay {{$tareas->total()}} registros</p>
             <table class="table table-striped">
               <tr>

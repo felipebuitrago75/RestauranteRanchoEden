@@ -5,7 +5,6 @@
  * https://github.com/laravel/framework/blob/5.2/src/Illuminate/Auth/Console/stubs/make/controllers/tareaControlador.stub
  */
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\tarea;
 use App\Http\Requests;
@@ -72,7 +71,7 @@ class tareaControlador extends Controller
      */
     public function show($id){
        $indicadores = Indicador::find($id);
-        $tareas = tarea::paginate();
+        $tareas = tarea::paginate(100);
         return view("tareas.index",compact('indicadores','tareas'));
     }
     /**
