@@ -72,7 +72,7 @@ class tareaControlador extends Controller
      */
     public function show($id){
        $indicadores = Indicador::find($id);
-        $tareas = tarea::paginate(15);
+        $tareas = tarea::paginate();
         return view("tareas.index",compact('indicadores','tareas'));
     }
     /**

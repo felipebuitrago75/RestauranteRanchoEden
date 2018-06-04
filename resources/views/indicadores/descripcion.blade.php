@@ -152,6 +152,7 @@
                 <tr>
 
                     <th>Tareas</th>
+                    
                 </tr>
                 </thead>
                 <tbody>

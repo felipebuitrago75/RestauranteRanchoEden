@@ -79,7 +79,7 @@ class tareaAireControlador extends Controller
     public function show($id){
 
         $indicadoresAire = IndicadorAire::find($id);
-        $tareasAire = tareaAire::paginate(15);
+        $tareasAire = tareaAire::paginate();
         return view("tareas.indexAire",compact('indicadoresAire','tareasAire'));
     }
     /**

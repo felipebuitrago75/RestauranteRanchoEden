@@ -77,7 +77,7 @@ class tareaAguaControlador extends Controller
     public function show($id){
 
         $indicadoresAgua = IndicadorAgua::find($id);
-        $tareasAgua = tareaAgua::paginate(15);
+        $tareasAgua = tareaAgua::paginate();
         return view("tareas.indexAgua",compact('indicadoresAgua','tareasAgua'));
     }
     /**
