@@ -55,7 +55,7 @@
 
 
     
-    <a href="{{ url('/register') }}" class="text-green">Registrar un nuevo miembro</a>
+
 
 </div><!-- /.login-box-body -->
 
