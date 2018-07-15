@@ -10,7 +10,7 @@
                         <p>
 
                         </p>
-                        <p>Existen {{$tareas->total()}} registros</p>
+
                         <table class="table table-striped">
                             <tr>
                                 <th>Id</th>
@@ -23,7 +23,7 @@
                                                 @if($indicadores->id_indicador == $tarea->indicador_id_indicador)
                                             <td>{{$tarea->id_tarea}}</td>
                                             <td>{{$tarea->descripcion}}</td>
-                                            <td><progress max="100" value= "{{$tarea->estado}}" ></progress></td>
+                                            <td><progress max="100" value= "{{$tarea->estado}}"></progress></td>
 
 
                                         </tr>

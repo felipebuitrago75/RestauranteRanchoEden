@@ -14,7 +14,7 @@
           <p>Existen {{$indicadores->total()}} registros</p>
             <table class="table table-striped">
               <tr>
-                <th>Id</th>
+
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Fecha</th>
@@ -25,7 +25,7 @@
               @foreach ($indicadores as $indicador)
               
               <tr>
-                <td>{{($indicador->id_indicador)}}</td> 
+
                 <td>{{$indicador->nombre}}</td> 
 
                 <td><a href="{{URL::action('PDFdocumentoController@edit',$indicador->id_indicador)}}"><img src="img/documento.jpg" title="Descripcióoon"></a></td>
